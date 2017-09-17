@@ -1,0 +1,9 @@
+/* Tabs 组件样式 */
+/* 选项卡 */
+.m-tabs ul { font-size: 11px; }
+.m-tabs ul li { display: inline-block; padding: 14px 27px; }
+.m-tabs ul li a { color: #dcdddd; }
+.m-tabs ul li.z-active a { color: #5ed0ba; }
+/* 滑动条 */
+.m-tabs .tabs_track { position: relative; height: 4px; }
+.m-tabs .tabs_thumb { position: absolute; height: 4px; border-radius: 2px; background: #5ed0ba; transition: ease 0.1s; }
