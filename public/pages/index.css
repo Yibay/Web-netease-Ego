@@ -2,3 +2,4 @@
 
 /* 引入模块化 组件样式 */
 @import url(../component/Tabs/Tabs.css);
+@import url(../component/Search/Search.css);

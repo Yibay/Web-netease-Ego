@@ -1,0 +1,7 @@
+/* 搜索框 组件样式 */
+.m-search{float:left;margin-left:37px;}
+.m-search .u-search{border:2px solid #5ed0ba;border-radius: 5px;}
+/* 输入框 */
+.m-search input{float:left;width:157px;height:36px;border:none;box-sizing:border-box;border-radius:5px;text-indent:1em;}
+/* 搜索按钮 */
+.m-search button{float:left;width:36px;height:36px;padding:0;border:none;border-radius:5px;background:#fff;font-size:20px;font-weight:700;color:#5ed0ba;}

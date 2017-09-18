@@ -1,4 +1,4 @@
-//
+// 防止window.App 不存在
 if(!window.App || typeof window.App != 'object'){
 	window.App = {};
 }
