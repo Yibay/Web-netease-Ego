@@ -3,3 +3,6 @@
 /* 引入模块化 组件样式 */
 @import url(../component/Tabs/Tabs.css);
 @import url(../component/Search/Search.css);
+@import url(../component/Guest/Guest.css);
+@import url(../component/User/User.css);
+@import url(../component/Nav/Nav.css);

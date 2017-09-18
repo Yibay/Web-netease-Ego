@@ -1,0 +1,18 @@
+/* User 组件样式 */
+.m-user{float:left;position:relative;margin-left:45px;}
+
+/* 用户信息 */
+.m-user .user_info{display:-webkit-flex;display:flex;-webkit-align-items:center;}
+.m-user:hover .user_info{border-color:#ddd;}
+	/* 用户头像 */
+.m-user .user_avatar img{width:50px;margin-right:9px;}
+	/* 用户头像、性别、下拉框提示图标 */
+.m-user .user_basicinfo{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;margin-right:6px;}
+.m-user .user_name{display:inline-block;max-width:64px;margin-right:3px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:17px;font-weight:900;}
+.m-user .u-icon-female,.m-user .u-icon-down{font-size:17px;font-weight:900;}
+
+/* 用户管理列表 */
+.m-user .user_list{display:none;position:absolute;top:0;left:-10px;width:calc(100% + 20px);padding: 90px 0 0;border:1px solid #ddd;box-sizing:border-box;}
+.m-user:hover .user_list{display:block;}
+.m-user .user_list li{text-indent:55px;padding:18px 0;line-height:1em;}
+.m-user .user_list li:hover{background:#eee;}
