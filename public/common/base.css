@@ -1,5 +1,3 @@
-/* 字体图标 */
-@import url(./font/iconfont.css);
 /* Reset */
 html,body,ul{margin:0;padding:0;}
 body{padding:20px;} /* 临时 */
@@ -15,13 +13,7 @@ button{outline:none;}
 .g-side{width:295px;float:right;}
 .g-footer{width:1080px;margin:0 auto;}
 /* 元件样式 */
-.u-icon{
-	font-family:"iconfont" !important;
-	font-size:16px;
-	font-style:normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
+@import url(./font/iconfont.css);
 .u-icon-btn{}
 /* 功能 */
 .f-cb::before,.f-cb::after{display:table;content:'';clear:both;}
