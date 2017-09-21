@@ -1,0 +1,19 @@
+/* Section 组件样式 */
+.m-section{margin-bottom:29px;}
+.m-section .u-icon{font-size:32px;color:#5ecbb5;}
+.m-section .section_head{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;-webkit-align-items:center;padding-left:30px;padding-right:28px;height:72px;border:1px solid #e4e5e5;box-sizing:border-box;background:#fff;}
+.m-section .section_head span{display:-webkit-flex;display:flex;-webkit-align-items:center;font-size:13px;}
+.m-section .section_head span i{margin-right:14px;}
+.m-section .section_head span.section_more{cursor:pointer;}
+.m-section .section_head span.section_more i{margin-right:0;margin-left:10px;}
+
+/* m-list水平布局列表 */
+.m-list{border:1px solid #e4e5e5;background:#fff;}
+.m-list ul{margin-left:-12px;padding:0 12px 12px;}
+.m-list li{float:left;padding-left:12px;padding-top:12px;width:25%;box-sizing:border-box;}
+.m-list li img{display:block;width:100%;}
+.m-list li div{margin-top:6px;margin-bottom:7px;font-size:10px;line-height:1em;}
+
+	/* m-list 样式拓展 */
+.m-list-4 li{width:25%;}
+.m-list-5 li{width:20%;}

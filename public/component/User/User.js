@@ -18,13 +18,13 @@ if(!window.App || typeof window.App != 'object'){
 			<li>个人中心</li>
 			<li>信息</li>
 			<li>设置</li>
-			<li id="logout">退出账号</li>
+			<li class="logout" id="logout">退出账号</li>
 		</ul>
 	</div>`;
 
-	// User组件
-	// 参数（options = {
-	//   parent 父容器节点 (必填)
+	// options 参数说明
+	// {
+	//   parent: dom节点, 父容器 (必填)
 	// }）
 	function User(options){
 		// 继承配置
@@ -32,6 +32,8 @@ if(!window.App || typeof window.App != 'object'){
 
 		// 缓存节点
 		this.container = this._template.cloneNode(true);
+		this.user_list = _.getElementsByClassName(this.container, 'user_list')[0];
+		this.nLogout = _.getElementsByClassName(this.user_list, 'logout')[0];
 
 		// 初始化
 		this.init();
@@ -44,7 +46,23 @@ if(!window.App || typeof window.App != 'object'){
 	User.prototype.init = function(){
 		// 挂载组件
 		this.parent.appendChild(this.container);
-	}
+		// 绑定事件
+		this.nLogout.addEventListener('click', this.logout.bind(this));
+	};
+	// 退出登录
+	User.prototype.logout = function(){
+		_.ajax({
+			url: '/api/logout',
+			method: 'POST',
+			data: {},
+			success: function(data){
+				if(data.code === 200){
+					window.location.href = "/index";
+				}
+			},
+			fail: function(){}
+		})
+	};
 
 	App.User = User;
 

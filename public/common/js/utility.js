@@ -45,6 +45,54 @@
 			return ele.getElementsByClassName(className);
 		}
 	}
+	// 6. 数据请求
+		/* options = {
+		* 	url: str,       请求地址, 如：'/api/logout',
+		* 	method: str,    请求方法, 如：'POST',
+		* 	data: obj,      请求数据,
+		* 	success: func,  请求成功后, 执行函数
+		* 	fail: func,     请求失败后, 执行函数
+		* }
+		*/
+	_.ajax = function(options){
+		var xhr = new XMLHttpRequest();
+
+		// 监听状态变化
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState == 4){
+				if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
+					options.success(JSON.parse(xhr.responseText));
+				}
+				else{
+					options.fail(xhr);
+				}
+			}
+		}
+		
+		// 开启请求
+		xhr.open(options.method, options.url, true);
+		// 有数据则 序列化，没数据则 send null
+		var data = options.data ? _.serialize(options.data) : null;
+		// 发送请求 
+		xhr.send(data);
+	}
+	// 7. 数据序列化
+	_.serialize = function(data){
+		// 若无数据
+		if(!data){return '';}
+		var pairs = [];
+		for(key in data){
+			// 过滤掉 继承来的属性
+			if(!data.hasOwnProperty(key)){continue;}
+			// 过滤掉 方法类的属性
+			if(typeof data[key] === 'function'){continue;}
+			var value = data[key].toString();
+			key = encodeURIComponent(key);
+			value = encodeURIComponent(value);
+			pairs.push(`${key}=${value}`);
+		}
+		return pairs.join('&');
+	}
 
 	// 把工具函数对象 绑定到 全局变量上。
 	global._ = _;

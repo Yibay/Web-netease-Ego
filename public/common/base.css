@@ -1,25 +1,31 @@
 /* 字体图标 */
 @import url(./font/iconfont.css);
 /* Reset */
-html,body,ul{margin:0;padding:0;}
+html,body,ul,h4{margin:0;padding:0;}
+body{background:#efefef;}
 ul{list-style:none;}
 a{text-decoration:none;}
 input{outline:none;}
 button{margin:0;padding:0;outline:none;cursor:pointer;}
 /* 布局样式 */
-.g-header{height:90px;min-width:1005px;background-color:#fff;}
+.g-header{height:90px;border: 1px solid #fff;box-sizing:border-box;background-color:#fff;}
 .g-banner{height:365px;position:relative;}
 .g-body{width:1080px;margin:50px auto 0;}
-.g-main{width:760px;left:left;}
+.g-main{width:760px;float:left;}
 .g-side{width:295px;float:right;}
 .g-footer{width:1080px;margin:0 auto;}
 /* 元件样式 */
 .u-icon-female{color:#e55f48;}
 .u-icon-male{color:#4b91fe;}
 .u-icon-down{color:#5ed0ba;}
+.u-icon-work{width:32px;height:32px;background:url(../res/images/iconfont/u-icon-work.png) center/100% 100% no-repeat;}
+.u-icon-pencle{width:32px;height:32px;background:url(../res/images/iconfont/u-icon-pencle.png) center/100% 100% no-repeat;}
+.u-icon-people{width:40px;height:40px;background:url(../res/images/iconfont/u-icon-people.png) center/100% 100% no-repeat;}
 .u-icon-btn{}
 .u-btn{display:inline-block;width:90px;height:38px;border:1px solid #5ed0ba;border-radius:3px;line-height:38px;text-align:center;text-decoration:none;}
 .u-btn-primary{color:#fff;background-color:#5ed0ba;}
 .u-btn-link{color:#5ed0ba;background-color:#fff;}
 /* 功能 */
 .f-cb::before,.f-cb::after{display:table;content:'';clear:both;}
+.f-dn{display:none;}
+.f-tac{text-align:center;}

@@ -1,0 +1,10 @@
+/* Slider 组件样式 */
+.m-slider{position:relative;width:100%;height:100%;overflow:hidden;}
+/* 轮播图 */
+.m-slider .slider_img{opacity:0;position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);transition:opacity .5s ease;}
+.m-slider .slider_img img{width:100vw;height:calc(100vw / 2267 * 1535);}
+/* 指示器 */
+.m-cursor{position:absolute;bottom:14px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);padding:5px 20px;-webkit-border-radius:9px;border-radius:9px;background:rgba(255,255,255,0.6);}
+.m-cursor li{float:left;width:10px;height:10px;border-radius:50%;background:#dedfdf;cursor:pointer;}
+.m-cursor li.z-active{background:#5ed0ba;}
+.m-cursor li + li{margin-left:10px;}

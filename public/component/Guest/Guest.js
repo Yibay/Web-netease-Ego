@@ -6,16 +6,16 @@ if(!window.App || typeof window.App != 'object'){
 (function(App){
 
 	//模板
-	var template = `<div class="m-guest" id="guest">
+	var template = `<div class="m-guest f-dn" id="guest">
 		<button class="u-btn u-btn-primary u-btn-icon" id="login">
 			<i class="u-icon u-icon-user"></i>登录
 		</button>
 		<button class="u-btn u-btn-link" id="register">注册</button>
 	</div>`;
 
-	// Guest组件
-	// 参数（options = {
-	//   parent 父容器节点 (必填)
+	// options 参数说明
+	// {
+	//   parent: dom节点, 父容器 (必填)
 	// }）
 	function Guest(options){
 		// 继承配置

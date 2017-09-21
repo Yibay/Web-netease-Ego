@@ -13,9 +13,9 @@ if(!window.App || typeof window.App != 'object'){
 		</div>
 	</form>`;
 
-	// Search组件
-	// 参数（options = {
-	//   parent 父容器节点 (必填)
+	// options 参数说明
+	// {
+	//   parent: dom节点, 父容器 (必填)
 	// }）
 	function Search(options){
 		// 继承配置

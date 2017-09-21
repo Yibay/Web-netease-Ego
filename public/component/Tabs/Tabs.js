@@ -11,17 +11,17 @@ if(!window.App || typeof window.App != 'object'){
 		<ul>
 			<li><a href="/index">首页</a></li>
 			<li><a href="/works">作品</a></li>
-			<li><a href="/index">圈子</a></li>
-			<li><a href="/index">奇思妙想</a></li>
+			<li><a href="javascript:;">圈子</a></li>
+			<li><a href="javascript:;">奇思妙想</a></li>
 		</ul>
 		<div class="tabs_track">
 			<div class="tabs_thumb" style="width: 68px;left: 0px;"></div>
 		</div>
 	</div>`;
 
-	// Tabs组件
-	// 参数（options = {
-	//   parent 父容器节点 (必填)
+	// options 参数说明
+	// {
+	//   parent: dom节点, 父容器 (必填)
 	// }）
 	function Tabs(options){
 		// 继承配置

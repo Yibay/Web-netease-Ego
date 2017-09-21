@@ -6,5 +6,5 @@
 .m-tabs ul li a{font-size:11px;color:#dcdddd;}
 .m-tabs ul li.z-active a{color:#5ed0ba;}
 /* 滑动条 */
-.m-tabs .tabs_track{position:relative;height:4px;background:#dcdddd;}
+.m-tabs .tabs_track{position:relative;height:4px;border-radius:2px;background:#dcdddd;}
 .m-tabs .tabs_thumb{position:absolute;height:4px;border-radius:2px;background:#5ed0ba;transition:ease 0.1s;}
