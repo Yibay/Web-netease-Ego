@@ -63,8 +63,11 @@ if(!window.App || typeof window.App != 'object'){
 		this.slider.appendChild(cursor);
 
 		cursor.addEventListener('click', function(evt){
-			// 点击指示器节点按钮，跳到对应轮播
-			this.nav(evt.target.dataset.index);
+			// 若点击的是li，而不是ul
+			if(typeof evt.target.dataset.index !== 'undefined'){
+				// 点击指示器节点按钮，跳到对应轮播
+				this.nav(evt.target.dataset.index);
+			}
 		}.bind(this));
 
 		return cursor.children;
