@@ -54,14 +54,17 @@
 		* 	fail: func,     请求失败后, 执行函数
 		* }
 		*/
-	_.ajax = function(options){
+	_.ajax = function(options, header){
 		var xhr = new XMLHttpRequest();
 
 		// 监听状态变化
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4){
 				if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
-					options.success(JSON.parse(xhr.responseText));
+					options.success(
+						// JSON.parse(xhr.responseText)
+						xhr.responseText
+					);
 				}
 				else{
 					options.fail(xhr);
@@ -71,8 +74,14 @@
 		
 		// 开启请求
 		xhr.open(options.method, options.url, true);
+		
 		// 有数据则 序列化，没数据则 send null
 		var data = options.data ? _.serialize(options.data) : null;
+		// 设置请求头
+		if(header && header['content-type'] && header['content-type'] === 'application/json'){
+			xhr.setRequestHeader('content-type','application/json');
+			data = options.data || null;
+		}
 		// 发送请求 
 		xhr.send(data);
 	}
