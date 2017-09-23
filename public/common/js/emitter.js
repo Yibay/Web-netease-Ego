@@ -10,7 +10,7 @@ if(!window.App || typeof window.App != 'object'){
 	var client_list = {};
 
 	// 订阅事件 函数
-	function listen(key, fn){
+	function on(key, fn){
 		// 若该事件，还没有事件列表
 		if(!client_list[key]){
 			// 则新建一个事件列表
@@ -32,9 +32,9 @@ if(!window.App || typeof window.App != 'object'){
 			return false;
 		}
 		// 否则，遍历数组，执行回调函数
-		fns.forEach(function(fn){
-			fn.apply(this, arguments);
-		});
+		for(var i=0;i<fns.length;i++){// 不能使用fns.forEach，除非和=>函数连用，不然会污染this，arguments
+			fns[i].apply(this, arguments);// emit将被混入组件，所以emit将被作为组件方法调用，预测this指向组件本身
+		}
 	}
 
 	// 取消订阅
@@ -63,7 +63,7 @@ if(!window.App || typeof window.App != 'object'){
 
 	// 揭示接口
 	App.emitter = {
-		listen: listen,
+		on: on,
 		emit: emit,
 		romove: remove
 	}

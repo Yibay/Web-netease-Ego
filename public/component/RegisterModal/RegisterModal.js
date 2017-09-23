@@ -31,7 +31,7 @@ if(!window.App || typeof window.App != 'object'){
 			<div class="u-formitem">
 				<label for="" class="formitem_tt">所在地</label>
 				<div class="formitem_ct">
-					<div class="m-cascadeselect" id="location"></div>
+					<div class="m-cascadeselect location_select" id="location"></div>
 				</div>
 			</div>
 			<div class="u-error f-dn"><span class="u-icon u-icon-error"></span><span id="errormsg"></span></div>
@@ -47,12 +47,34 @@ if(!window.App || typeof window.App != 'object'){
 	function RegisterModal(options){
 		// 弹窗内容模块
 		this.content = template;
-		// 继承父类Modal
+		// 继承父类Modal (挂载工作在Modal中完成)
 		App.Modal.call(this, options);
+
+		// 缓存节点 this.nPhone
+
+		// 初始化
+		this.initSelect();
+		this.initRegisterEvent();
 	}
 
 	// 继承父类Modal的原型
 	RegisterModal.prototype = Object.create(App.Modal.prototype);
 
+	RegisterModal.prototype.initRegisterEvent = function(){};
+	// 初始化选择器
+	RegisterModal.prototype.initSelect = function(){
+		// 地址 级联选择器
+		new App.CascadeSelect({
+			parent: _.getElementsByClassName(this.container, 'location_select')[0],
+			// 地址数据
+			data: _.toSelectData(ADDRESS_CODES)
+		})
+	};
+	// 重置验证码
+	RegisterModal.prototype.resetCaptcha = function(){};
+	RegisterModal.prototype.submit = function(){};
+	RegisterModal.prototype.check = function(){};
+
 	App.RegisterModal = RegisterModal;
+
 })(window.App);

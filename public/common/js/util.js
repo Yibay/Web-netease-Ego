@@ -13,7 +13,18 @@
 			// obj 继承 options中的属性
 			Object.assign(obj, options);
 		}
-	}
+	};
+	// 8. 判断是否含有该class
+	_.hasClassName = function(ele, className){
+		var current_className = ` ${ele.className} `,has_className;
+		if(current_className.indexOf(` ${className} `) === -1){
+			has_className = false;
+		}
+		else{
+			has_className = true;
+		}
+		return has_className;
+	};
 	// 2. 为元素添加css类
 	_.addClassName = function(ele, className){
 		var new_className = ` ${ele.className} `;
@@ -23,7 +34,7 @@
 			// 更新className
 			ele.className = new_className.trim();
 		}
-	}
+	};
 	// 3. 删除元素的css类
 	_.delClassName = function(ele, className){
 		// 前后加上空格，防止误伤
@@ -31,20 +42,20 @@
 		new_className = new_className.replace(new RegExp(` ${className} `, 'g'), ' ');
 		// 更新className
 		ele.className = new_className.trim();
-	}
+	};
 	// 4. 生成dom元素
 	_.html2node = function(str){
 		var container = document.createElement('div');
 		container.innerHTML = str;
 		return container.children[0];
-	}
+	};
 	// 5. 按className获取dom元素
 	_.getElementsByClassName = function(ele, className){
 		// 若浏览器支持getElementsByClassName, 则使用
 		if(document.getElementsByClassName){
 			return ele.getElementsByClassName(className);
 		}
-	}
+	};
 	// 6. 数据请求
 		/* options = {
 		* 	url: str,       请求地址, 如：'/api/logout',
@@ -84,7 +95,7 @@
 		}
 		// 发送请求 
 		xhr.send(data);
-	}
+	};
 	// 7. 数据序列化
 	_.serialize = function(data){
 		// 若无数据
@@ -101,6 +112,25 @@
 			pairs.push(`${key}=${value}`);
 		}
 		return pairs.join('&');
+	};
+	// 9. 将地址data，转成 选择器data格式 {name:,value:,list:}
+	_.toSelectData = function(data){
+		// 映射函数
+		function mapping(data){
+			// 对data数组映射
+			return data.map(function(item){
+				// 设置对应对象的 name，value
+				var result_data = {
+					name: item[1],
+					value: item[0]
+				}
+				// 若存在第3项, 则递归映射第3项
+				item[2] && (result_data.list = mapping(item[2]));
+				return result_data;
+			});
+		}
+		var select_data = mapping(data);
+		return select_data;
 	}
 
 	// 把工具函数对象 绑定到 全局变量上。
