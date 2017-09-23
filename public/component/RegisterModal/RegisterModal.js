@@ -29,6 +29,12 @@ if(!window.App || typeof window.App != 'object'){
 				<input type="password" id="comform_password" name="comform_password" placeholder="" class="formitem_ct u-ipt"/>
 			</div>
 			<div class="u-formitem">
+				<label for="" class="formitem_tt">生 日</label>
+				<div class="formitem_ct">
+					<div class="m-cascadeselect birthday_select" id="birthday"></div>
+				</div>
+			</div>
+			<div class="u-formitem">
 				<label for="" class="formitem_tt">所在地</label>
 				<div class="formitem_ct">
 					<div class="m-cascadeselect location_select" id="location"></div>
@@ -63,12 +69,18 @@ if(!window.App || typeof window.App != 'object'){
 	RegisterModal.prototype.initRegisterEvent = function(){};
 	// 初始化选择器
 	RegisterModal.prototype.initSelect = function(){
+		// 生日 级联选择器
+		new App.CascadeSelect({
+			parent: _.getElementsByClassName(this.container, 'birthday_select')[0],
+			// 生日数据（为了让 生日和地址 可以共用一个级联选择器组件，则构造相同的数据结构）
+			data: _.createDateData()
+		});
 		// 地址 级联选择器
 		new App.CascadeSelect({
 			parent: _.getElementsByClassName(this.container, 'location_select')[0],
 			// 地址数据
 			data: _.toSelectData(ADDRESS_CODES)
-		})
+		});
 	};
 	// 重置验证码
 	RegisterModal.prototype.resetCaptcha = function(){};

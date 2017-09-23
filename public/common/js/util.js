@@ -132,6 +132,35 @@
 		var select_data = mapping(data);
 		return select_data;
 	}
+	// 10. 以选择器data格式，生成日期数据 {name:,value:,list:}
+	_.createDateData = function(start_year, end_year){
+		// 默认值
+		start_year = start_year || 1970;
+		end_year = end_year || new Date().getFullYear();
+		// 日模板  (用模板，可以省去第3重循环，提升效率)
+		var day_template = [];
+		for(var k=1;k<=31;k++){
+			day_template.push({name:k,value:k});
+		}
+		var select_data = [];
+		for(var i=start_year;i<=end_year;i++){
+			var year = {
+				name: i,
+				value: i,
+				list: []
+			}
+			for(var j=1;j<=12;j++){
+				var month = {
+					name: j,
+					value: j,
+					list: day_template.slice(0,new Date(i,j,0).getDate())
+				}
+				year.list.push(month);
+			}
+			select_data.push(year);
+		}
+		return select_data;
+	}
 
 	// 把工具函数对象 绑定到 全局变量上。
 	global._ = _;
