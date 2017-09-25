@@ -1,4 +1,4 @@
 /* 级联选择器 组件 */
 .m-cascadeselect{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;height:100%;}
-.m-cascadeselect > .m-select{-webkit-flex:1;flex:1;}
+.m-cascadeselect > .m-select{width:29%;}
 .m-cascadeselect > .m-select + .m-select{margin-left:16px;}

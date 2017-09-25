@@ -52,7 +52,13 @@
 	CascadeSelect.prototype.getList = function(n, index){
 		return this.selectList[n - 1].options[index].list;
 	}
-	CascadeSelect.prototype.getValue = function(){}
+	CascadeSelect.prototype.getValue = function(){
+		var value = [];
+		for(var i=0;i<3;i++){
+			value.push(this.selectList[i].getValue());
+		}
+		return value;
+	}
 
 	App.CascadeSelect = CascadeSelect;
 })(window.App);

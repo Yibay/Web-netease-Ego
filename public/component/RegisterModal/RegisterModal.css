@@ -1,10 +1,33 @@
 /* 注册登录框 组件样式 */
-.m-registermodal{padding:39px 196px 42px 106px;}/*padding-right, 136 + 60*/
-
+.m-registermodal{position:relative;padding:39px 136px 42px 106px;}
+/* 关闭弹窗按钮 */
+.m-registermodal .close_btn{position:absolute;right:9px;top:9px;font-size:15px;color:#c0c0c1;cursor:pointer;}
+/* logo */
 .m-registermodal .logo{width:214px;}
-
+/* 表单 */
+.m-registermodal .m-form{width:345px;}
+/* 单选框 */
+.m-registermodal .sex_box{display:-webkit-flex;display:flex;height:100%;}
+.m-registermodal .sex_box label{display:-webkit-flex;display:flex;-webkit-flex:1;flex:1;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;}
+.m-registermodal input[type=radio]{display:none;}/* 隐藏单选框 */
+.m-registermodal input[type=radio] ~ .u-icon{margin-right:16px;color:#5ed0ba;}
+.m-registermodal input[type=radio] ~ .u-icon-radio{display:none;}/* 构造伪单选框 */
+.m-registermodal input[type=radio]:checked ~ .u-icon-radio{display:inline-block;}/* 构造伪单选框 */
+.m-registermodal input[type=radio]:checked ~ .u-icon-radiocircle{display:none;}/* 构造伪单选框 */
 /* 级联选择器 */
 .m-registermodal .birthday_select .select_opt{z-index:99;}/* 上方的生日选择器，层级要高于下方的日期选择器 */
 .m-registermodal .location_select .select_opt{z-index:9;}
+/* 二维码 */
+.m-registermodal .formitem_ct-validate .u-ipt{float:left;height:100%;width:calc(100% - 94px);border-radius:4px 0 0 4px;box-sizing:border-box;}
+.m-registermodal .formitem_ct-validate img{float:right;height:100%;width:94px;border:1px solid #5ed0ba;border-left:none;box-sizing:border-box;border-radius:0 4px 4px 0;cursor:pointer;}
+/* 同意条款 */
+.m-registermodal .terms label{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;font-size:12px;line-height:2em;cursor:pointer;}
+.m-registermodal .terms label span{color:#2ea7e0;}
+/* 复选框 */
+.m-registermodal input[type=checkbox]{display:none;}/* 隐藏原生复选框 */
+.m-registermodal input[type=checkbox] ~ .u-icon{margin-right:8px;color:#5ed0ba;}
+.m-registermodal input[type=checkbox] ~ .u-icon-checkboxchecked{display:none;}/* 构造伪复选框 */
+.m-registermodal input[type=checkbox]:checked ~ .u-icon-checkboxchecked{display:inline-block;}/* 构造伪复选框 */
+.m-registermodal input[type=checkbox]:checked ~ .u-icon-checkbox{display:none;}/* 构造伪复选框 */
 /* 注册按钮 */
-.m-registermodal button[type=submit]{width:calc(100% + 60px);}
+.m-registermodal button[type=submit]{width:100%;margin-top:15px;}

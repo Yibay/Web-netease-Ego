@@ -22,18 +22,22 @@ button{margin:0;padding:0;outline:none;cursor:pointer;}
 .u-icon-work{width:32px;height:32px;background:url(../res/images/iconfont/u-icon-work.png) center/100% 100% no-repeat;}
 .u-icon-pencle{width:32px;height:32px;background:url(../res/images/iconfont/u-icon-pencle.png) center/100% 100% no-repeat;}
 .u-icon-people{width:40px;height:40px;background:url(../res/images/iconfont/u-icon-people.png) center/100% 100% no-repeat;}
+.u-icon-errorsquare{color:red;}
 .u-icon-btn{}
 	/* 表单样式 */
-.u-formitem{margin:10px 0;white-space:nowrap;}
+.u-formitem{margin:10px 0 10px 19px;white-space:nowrap;}
 .u-formitem .formitem_tt{float:left;width:60px;font-size:12px;line-height:40px;}
-.u-formitem .formitem_ct{display:inline-block;width:266px;height:40px;box-sizing:border-box;}
+.u-formitem .formitem_ct{display:inline-block;width:266px;height:40px;box-sizing:border-box;font-size:12px;}
 		/* 输入框 */
 .u-ipt{border:1px solid #5ed0ba;-webkit-border-radius:4px;border-radius:4px;font-size:12px;text-indent:15px;}
-.u-ipt:focus{border-color:red;}
+.u-ipt.error{border-color:red;}
 		/* 按钮 */
 .u-btn{display:inline-block;width:90px;height:38px;border:1px solid #5ed0ba;border-radius:3px;line-height:38px;text-align:center;text-decoration:none;}
 .u-btn-primary{color:#fff;background-color:#5ed0ba;}
 .u-btn-link{color:#5ed0ba;background-color:#fff;}
+	/* 其它 */
+.u-error{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;font-size:12px;line-height:2em;cursor:pointer;}
+.u-error span + span{margin-left:8px;}
 /* 功能 */
 .f-cb::before,.f-cb::after{display:table;content:'';clear:both;}
 .f-dn{display:none;}

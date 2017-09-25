@@ -63,12 +63,13 @@
 		* 	data: obj,      请求数据,
 		* 	success: func,  请求成功后, 执行函数
 		* 	fail: func,     请求失败后, 执行函数
+		*   header: {}      请求头
 		* }
 		*/
 	_.ajax = function(options, header){
 		var xhr = new XMLHttpRequest();
 
-		// 监听状态变化
+		// 0. 监听状态变化
 		xhr.onreadystatechange = function(){
 			if(xhr.readyState == 4){
 				if((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304){
@@ -82,18 +83,32 @@
 				}
 			}
 		}
-		
-		// 开启请求
-		xhr.open(options.method, options.url, true);
-		
-		// 有数据则 序列化，没数据则 send null
-		var data = options.data ? _.serialize(options.data) : null;
-		// 设置请求头
-		if(header && header['content-type'] && header['content-type'] === 'application/json'){
-			xhr.setRequestHeader('content-type','application/json');
-			data = options.data || null;
+
+		var data;
+
+		// 若是 GET 请求
+		if(options.method.toUpperCase() === 'GET'){
+			var search = options.data ? _.serialize(options.data) : '';
+			options.url += '?' + search;
+			data = null;
 		}
-		// 发送请求 
+		
+		// 1. 开启请求
+		xhr.open(options.method, options.url, true);
+
+		// 若是 POST 请求
+		if(options.method.toUpperCase() === 'POST'){
+			data = options.data ? JSON.stringify(options.data) : null;
+		}
+
+		// 若有请求头，则设置请求头
+		if(options.header){
+			for(var key in options.header){
+				xhr.setRequestHeader(key, options.header[key]);
+			}
+		}
+		console.log(data);
+		// 2. 发送请求 
 		xhr.send(data);
 	};
 	// 7. 数据序列化
@@ -157,7 +172,7 @@
 				}
 				year.list.push(month);
 			}
-			select_data.push(year);
+			select_data.unshift(year);
 		}
 		return select_data;
 	}
