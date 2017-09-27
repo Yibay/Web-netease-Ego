@@ -36,12 +36,36 @@ if(!window.App || typeof window.App != 'object'){
 			// 2.搜索框 组件
 			this.search = new App.Search({parent: this.container});
 			// 3.未登录显示的客人 组件
-			new App.Guest({parent: this.container});
+			this.nGuest = new App.Guest({parent: this.container});
 			// 4.已登录显示的用户 组件
-			new App.User({parent: this.container});
+			this.nUser = new App.User({parent: this.container});
 
-			
+			// 绑定登录、注册、登出事件
+			this.initLoginStatus();
 	};
+	//  初始化登录状态
+	Nav.prototype.initLoginStatus = function(){
+		_.ajax({
+			url: '/api/users?getloginuser',
+			method: 'GET',
+			success: (function(data){
+				if(data.code === 200){
+					this.initUserInfo(data.result);
+				}
+				// 如果不是200，则隐藏User，显示Guest
+			}).bind(this)
+		})
+	};
+	// 初始化用户信息
+	Nav.prototype.initUserInfo = function(data){
+		// 设置用户姓名和性别Icon
+		this.nName.innerText = data.nickName;
+		_.addClassName(this.nSexIcon, iconConfig[data.sex]);
+		// 隐藏登录，注册按钮，显示用户信息
+		this.nGuest.hide();
+		this.nUser.show();
+	};
+	Nav.prototype.getTabIndex = function(){};
 
 	App.Nav = Nav;
 })(window.App);

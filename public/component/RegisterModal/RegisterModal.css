@@ -1,4 +1,4 @@
-/* 注册登录框 组件样式 */
+/* 注册登录弹窗 组件样式 */
 .m-registermodal{position:relative;padding:39px 136px 42px 106px;}
 /* 关闭弹窗按钮 */
 .m-registermodal .close_btn{position:absolute;right:9px;top:9px;font-size:15px;color:#c0c0c1;cursor:pointer;}
@@ -6,6 +6,8 @@
 .m-registermodal .logo{width:214px;}
 /* 表单 */
 .m-registermodal .m-form{width:345px;}
+.m-registermodal .u-formitem .formitem_tt{margin-left:19px;}
+.m-registermodal .u-formitem .formitem_ct{width:266px;height:40px;}
 /* 单选框 */
 .m-registermodal .sex_box{display:-webkit-flex;display:flex;height:100%;}
 .m-registermodal .sex_box label{display:-webkit-flex;display:flex;-webkit-flex:1;flex:1;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;}
@@ -30,4 +32,4 @@
 .m-registermodal input[type=checkbox]:checked ~ .u-icon-checkboxchecked{display:inline-block;}/* 构造伪复选框 */
 .m-registermodal input[type=checkbox]:checked ~ .u-icon-checkbox{display:none;}/* 构造伪复选框 */
 /* 注册按钮 */
-.m-registermodal button[type=submit]{width:100%;margin-top:15px;}
+.m-registermodal button[type=submit]{width:100%;height:40px;line-height:40px;margin-top:15px;}

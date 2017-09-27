@@ -1,6 +1,6 @@
 /* Guest 组件样式 */
 .m-guest{float:left;margin-left: 29px;}
-.m-guest .u-btn{float:left;font-size:12px;}
+.m-guest .u-btn{float:left;width: 90px;font-size:12px;}
 .m-guest .u-btn + .u-btn{margin-left:5px;}
 .m-guest .u-btn.u-btn-icon{text-align:left;}
 .m-guest .u-btn .u-icon{float:left;height:100%;margin-left:15px;margin-right: 10px;font-size:15px;font-weight:900;}

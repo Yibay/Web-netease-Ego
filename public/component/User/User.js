@@ -5,7 +5,7 @@ if(!window.App || typeof window.App != 'object'){
 
 (function(App){
 	// 模板
-	var template = `<div class="m-user" id=userdropdown>
+	var template = `<div class="m-user f-dn" id=userdropdown>
 		<div class="user_info">
 			<span class="user_avatar"><img src="/res/images/avatar.png" alt="" /></span>
 			<span class="user_basicinfo">
@@ -62,6 +62,14 @@ if(!window.App || typeof window.App != 'object'){
 			},
 			fail: function(){}
 		})
+	};	
+	// 显示此组件
+	User.prototype.show = function(){
+		_.delClassName(this.container, 'f-dn');
+	};
+	// 隐藏此组件
+	User.prototype.hide = function(){
+		_.addClassName(this.container, 'f-dn');
 	};
 
 	App.User = User;

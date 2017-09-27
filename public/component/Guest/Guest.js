@@ -6,7 +6,7 @@ if(!window.App || typeof window.App != 'object'){
 (function(App){
 
 	//模板
-	var template = `<div class="m-guest f-dn" id="guest">
+	var template = `<div class="m-guest" id="guest">
 		<button class="u-btn u-btn-primary u-btn-icon" id="login">
 			<i class="u-icon u-icon-user"></i>登录
 		</button>
@@ -30,6 +30,9 @@ if(!window.App || typeof window.App != 'object'){
 		this.init();
 	}
 
+	// 混入事件管理器
+	_.extend(Guest.prototype, App.emitter);
+
 	// 用于复用的dom节点
 	Guest.prototype._template = _.html2node(template);
 
@@ -38,16 +41,24 @@ if(!window.App || typeof window.App != 'object'){
 		// 绑定事件
 		this.nLogin.addEventListener('click', (function(){
 			// 弹出登录弹窗
-			alert('登录弹窗');
+			this.emit('showLoginModal');
 		}).bind(this));
 		this.nRegister.addEventListener('click', (function(){
 			// 弹出注册弹窗
-			alert('注册弹窗');
+			this.emit('showRegisterModal');
 		}).bind(this));
 
 		// 挂载组件
 		this.parent.appendChild(this.container);
 	}
+	// 显示此组件
+	Guest.prototype.show = function(){
+		_.delClassName(this.container, 'f-dn');
+	};
+	// 隐藏此组件
+	Guest.prototype.hide = function(){
+		_.addClassName(this.container, 'f-dn');
+	};
 
 	App.Guest = Guest;
 

@@ -1,11 +1,7 @@
-// 防止window.App 不存在
-if(!window.App || typeof window.App != 'object'){
-	window.App = {};
-}
 
-
-/* 注册组件
-* 使用注册组件前，要先引入 Modal组件
+/* 注册弹窗组件
+* 使用注册弹窗组件前，要先引入 Modal组件、CascadeSelect组件
+* 以及 事件管理器、工具函数模块、md5加密库
 */
 (function(App){
 
@@ -88,7 +84,7 @@ if(!window.App || typeof window.App != 'object'){
 		// 继承父类Modal (挂载工作在Modal中完成)
 		App.Modal.call(this, options);
 
-		// 缓存节点 this.nPhone
+		// 缓存节点
 		this.closeBtn = _.getElementsByClassName(this.container, 'close_btn')[0]; // 关闭按钮
 		this.captchaImg = document.getElementById('captchaimg'); // 二维码图片
 		this.phone = document.getElementById('phone'); // 电话input
@@ -271,6 +267,8 @@ if(!window.App || typeof window.App != 'object'){
 
 	// 初始化注册事件
 	RegisterModal.prototype.initRegisterEvent = function(){
+		// 订阅显示注册弹窗事件
+		this.on('showRegisterModal', this.show.bind(this));
 		// 为关闭按钮，绑定关闭弹窗事件
 		this.closeBtn.addEventListener('click', this.hide.bind(this));
 		// 为二维码图片，绑定刷新事件

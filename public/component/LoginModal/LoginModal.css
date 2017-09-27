@@ -1,0 +1,23 @@
+/* 注册登录弹窗 组件样式 */
+.m-loginmodal{position:relative;width:408px;padding:34px 31px;border:1px solid #a8a8a8;box-sizing:border-box;}
+/* 关闭弹窗按钮 */
+.m-loginmodal .close_btn{position:absolute;right:9px;top:9px;font-size:15px;color:#c0c0c1;cursor:pointer;}
+/* 头部 */
+.m-loginmodal .modal_tt{display:-webkit-flex;display:flex;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:flex-end;margin-bottom:30px;}
+.m-loginmodal .modal_tt > *{line-height:1em;}
+.m-loginmodal .modal_tt strong{font-size:20px;color:#5ed0ba;font-weight:400;}
+.m-loginmodal .modal_tt span{font-size:12px;}
+.m-loginmodal .modal_tt .u-link{color:#5ed0ba;}
+/* 保持登录 */
+.m-loginmodal .remember_box{margin-bottom:0;font-size:12px;line-height:2em;cursor:pointer;}
+.m-loginmodal .remember_box label{display:-webkit-flex;display:flex;-webkit-align-items:center;align-items:center;line-height:1em;}
+.m-loginmodal .remember_box label .u-icon{margin-right:8px;color:#5ed0ba;}
+/* 多选框 */
+.m-loginmodal input[type=checkbox]{display:none;}
+.m-loginmodal input[type=checkbox] ~ .u-icon-checkboxchecked{display:none;}
+.m-loginmodal input[type=checkbox]:checked ~ .u-icon-checkbox{display:none;}
+.m-loginmodal input[type=checkbox]:checked ~ .u-icon-checkboxchecked{display:inline-block;}
+/* 提交按钮 */
+.m-loginmodal button[type=submit]{margin-top:10px;}
+/* 表单样式 */
+.m-form-1 ::placeholder{color:#7ad7c4;}

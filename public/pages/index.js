@@ -1,37 +1,5 @@
 (function(App){
-	// 获取验证码
-	// _.ajax({
-	// 	url: '/captcha',
-	// 	method: 'GET',
-	// 	success: function(data){
-	// 		var img = _.html2node('<img />');
-	// 		img.src = data;
-	// 		document.getElementsByTagName('body')[0].appendChild(img);
-	// 	},
-	// 	fail: function(){}
-	// })
 
-	// 预注册
-	// _.ajax({
-	// 	 	url: '/api/register',
-	// 	 	method: 'POST',
-	// 	 	data: {
-	// 			"username": "gKYeivXSti2",
-	// 			"nickname": "Byptm6uAa7",
-	// 			"sex": 1,
-	// 			"province": 25605,
-	// 			"city": 330200,
-	// 			"district": 330000,
-	// 			"birthday": "2003-12-03",
-	// 			"password": "fTCQjfsOEw",
-	// 			"captcha": "VJWbHrRcXD"
-	// 		},
-	// 	 	success: function(){console.log('success')},
-	// 	 	fail: function(){},
-	// 	},
-	// 	{
-	// 		'content-type':'application/json'
-	// 	})
 	// 登录
 	// _.ajax({
 	// 	 	url: '/api/login',
@@ -157,7 +125,10 @@
 			</div>`)
 	});
 
-	window.modal = new App.RegisterModal({parent: document.body});
-	modal.show();
+	// 注册弹窗
+	new App.RegisterModal({parent: document.body});
+	// 登录弹窗
+	var model = new App.LoginModal({parent: document.body});
+	model.show();
 	
 })(window.App);
