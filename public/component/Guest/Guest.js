@@ -38,6 +38,8 @@ if(!window.App || typeof window.App != 'object'){
 
 	// 初始化（绑定事件，将组件载入页面）
 	Guest.prototype.init = function(){
+		// 订阅事件
+		this.on('login', this.hide.bind(this)); // 登录事件
 		// 绑定事件
 		this.nLogin.addEventListener('click', (function(){
 			// 弹出登录弹窗
@@ -50,7 +52,7 @@ if(!window.App || typeof window.App != 'object'){
 
 		// 挂载组件
 		this.parent.appendChild(this.container);
-	}
+	};
 	// 显示此组件
 	Guest.prototype.show = function(){
 		_.delClassName(this.container, 'f-dn');

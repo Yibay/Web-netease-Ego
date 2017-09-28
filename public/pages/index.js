@@ -42,6 +42,14 @@
 			</div>`)
 	});
 
+	// 明日之星
+	new App.Section({
+		parent: _.getElementsByClassName(document, 'g-main')[0],
+		icon: 'u-icon-star',
+		title: '/明日之星/',
+		contentElem: new App.StarList().container
+	});
+
 	// 构建最新作品
 	new App.Section({
 		parent: _.getElementsByClassName(document, 'g-main')[0],
@@ -128,7 +136,6 @@
 	// 注册弹窗
 	new App.RegisterModal({parent: document.body});
 	// 登录弹窗
-	var model = new App.LoginModal({parent: document.body});
-	model.show();
+	new App.LoginModal({parent: document.body});
 	
 })(window.App);

@@ -1,0 +1,20 @@
+/* StarList 组件样式 */
+.m-list .m-cardul{margin:0;padding:12px 0;}
+/* li单元 */
+.m-cardul .m-card{display:-webkit-flex;display:flex;margin-left:12px;padding:14px 27px 11px 22px;width:calc(50% - 18px);border:1px solid #e9e9e9;-webkit-align-items:center;align-items:center;box-sizing:border-box;}
+/* 头像 */
+.m-card .card_avatar{width:68px;height:68px;-webkit-border-radius:50%;border-radius:50%;}
+/* 信息 */
+.m-card .card_info{-webkit-flex:1;flex:1;margin-left:24px;}
+.m-card .card_info div{max-width:155px;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.m-card .card_info div:nth-of-type(1){margin-bottom:16px;}
+.m-card .card_info div span{font-size:8px;font-weight:200;}
+.m-card .card_info div span + span{margin-left:15px;}
+/* 关注按钮 */
+.m-card .u-btn-sm{display:-webkit-flex;display:flex;width:62px;height:26px;-webkit-justify-content:center;justify-content:center;font-size:11px;line-height:1em;}
+.m-card .u-btn{position:relative;background:#5ed0ba;color:#fff;}
+.m-card .u-btn.z-follow{background:#fff;color:#5ed0ba;}
+.m-card .u-btn.z-follow:hover:after{content:'取消关注';position:absolute;left:0;right:0;top:0;bottom:0;background:#5ed0ba;color:#fff;line-height:24px;}
+.m-card .u-btn .u-icon{font-size:12px;color:#fff;}
+.m-card .u-btn.z-follow .u-icon{color:#5ed0ba;}
+.m-card .u-icon-tianjia{margin-right:5px;}

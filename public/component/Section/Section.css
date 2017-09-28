@@ -15,5 +15,6 @@
 .m-list li div{margin-top:6px;margin-bottom:7px;font-size:10px;line-height:1em;}
 
 	/* m-list 样式拓展 */
+.m-list-2 li{width:50%;}
 .m-list-4 li{width:25%;}
 .m-list-5 li{width:20%;}

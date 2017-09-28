@@ -5,9 +5,6 @@ if(!window.App || typeof window.App != 'object'){
 
 (function(App){
 
-	// 模板
-	var template = `<div class="m-section"></div>`;
-
 	/* options 参数说明
 	*{
 	*	parent: dom节点, 父容器（必填）

@@ -124,11 +124,16 @@
 			_.ajax({
 				url: '/api/login',
 				method: 'POST',
+				header: {
+					'content-type': 'application/json'
+				},
 				data: data,
 				success: function(data){
+					data = JSON.parse(data);
+					console.log(data);
 					if(data.code === 200){
 						this.hide();
-						this.emit('ok', data.result);
+						this.emit('login', data.result);
 					}
 					else{
 						// 根据不同代码错误，显示不同的错误提示

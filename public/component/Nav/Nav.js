@@ -40,7 +40,7 @@ if(!window.App || typeof window.App != 'object'){
 			// 4.已登录显示的用户 组件
 			this.nUser = new App.User({parent: this.container});
 
-			// 绑定登录、注册、登出事件
+			// 初始化登录状态
 			this.initLoginStatus();
 	};
 	//  初始化登录状态
@@ -49,21 +49,20 @@ if(!window.App || typeof window.App != 'object'){
 			url: '/api/users?getloginuser',
 			method: 'GET',
 			success: (function(data){
+				data = JSON.parse(data);
+				console.log(data);
 				if(data.code === 200){
-					this.initUserInfo(data.result);
+					// 显示用户组件
+					this.nUser.show(data.result);
+					// 隐藏客人组件
+					this.nGuest.hide();
 				}
-				// 如果不是200，则隐藏User，显示Guest
-			}).bind(this)
+				// 如果不是200，则隐藏User，显示Guest，默认就是如此，无需操作
+			}).bind(this),
+			fail: function(){
+				console.log('api/users?getloginuser 失败');
+			}
 		})
-	};
-	// 初始化用户信息
-	Nav.prototype.initUserInfo = function(data){
-		// 设置用户姓名和性别Icon
-		this.nName.innerText = data.nickName;
-		_.addClassName(this.nSexIcon, iconConfig[data.sex]);
-		// 隐藏登录，注册按钮，显示用户信息
-		this.nGuest.hide();
-		this.nUser.show();
 	};
 	Nav.prototype.getTabIndex = function(){};
 

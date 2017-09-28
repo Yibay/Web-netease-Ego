@@ -37,6 +37,7 @@
 	Select.prototype.render = function(data, defaultIndex){
 		// 更新下拉列表
 		var optionsHTML = '';
+		data = data || []; // 若data为null，则默认空数组
 		for(var i = 0;i < data.length;i++){
 			// 格式化数据{name:,value:}
 			optionsHTML += `<li data-index=${i}>${data[i].name}</li>`
@@ -59,19 +60,25 @@
 		}
 		// 为本次选中设置效果
 		this.selectedIndex = index;
-		_.addClassName(this.nOptions[this.selectedIndex], 'z-select');
-		// 更新对外显示的选中内容
-		this.nValue.innerText = this.options[this.selectedIndex].name;
+		// 防止被选列表为空数组报错
+		if(this.nOptions.length > 0){
+			_.addClassName(this.nOptions[this.selectedIndex], 'z-select');
+			// 更新对外显示的选中内容
+			this.nValue.innerText = this.options[this.selectedIndex].name;
+		}
+		else{
+			this.nValue.innerText = '';
+		}
 		// 触发select事件
 		this.emit('select', {
-			value:this.getValue(),  // 数据值（如：地址编码）
-			target:this, // 触发事件的选择器 本身，用于辅助判定级联选择器中，哪些选择器响应
-			index:this.selectedIndex // 选中选项的序号，用于找出下级选择器 下拉菜单的数据
+			value: this.getValue(),  // 数据值（如：地址编码）
+			target: this, // 触发事件的选择器 本身，用于辅助判定级联选择器中，哪些选择器响应
+			index: this.selectedIndex // 选中选项的序号，用于找出下级选择器 下拉菜单的数据
 		});
 	};
 	// 获取选项值
 	Select.prototype.getValue = function(){
-		return this.options[this.selectedIndex].value;
+		return typeof this.options[this.selectedIndex] !== 'undefined' ? this.options[this.selectedIndex].value : '';
 	};
 
 	// 2. 切换展开、关闭下拉列表

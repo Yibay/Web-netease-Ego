@@ -245,7 +245,7 @@
 					data = JSON.parse(data);
 					if(data.code === 200){
 						this.hide();
-						this.emit('ok');
+						this.emit('showLoginModal');
 					}
 					else{
 						this.nError.innerText = data.msg;

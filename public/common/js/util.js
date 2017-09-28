@@ -60,13 +60,13 @@
 		/* options = {
 		* 	url: str,       请求地址, 如：'/api/logout',
 		* 	method: str,    请求方法, 如：'POST',
-		* 	data: obj,      请求数据,
+		* 	data: obj,      请求数据,(选填)
 		* 	success: func,  请求成功后, 执行函数
 		* 	fail: func,     请求失败后, 执行函数
-		*   header: {}      请求头
+		*   header: {}      请求头(选填)
 		* }
 		*/
-	_.ajax = function(options, header){
+	_.ajax = function(options){
 		var xhr = new XMLHttpRequest();
 
 		// 0. 监听状态变化
@@ -88,8 +88,8 @@
 
 		// 若是 GET 请求
 		if(options.method.toUpperCase() === 'GET'){
-			var search = options.data ? _.serialize(options.data) : '';
-			options.url += '?' + search;
+			var search = options.data ? ('?' + _.serialize(options.data)) : '';
+			options.url += search;
 			data = null;
 		}
 		
