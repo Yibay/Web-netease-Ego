@@ -17,13 +17,7 @@ if(!window.App || typeof window.App != 'object'){
 		// 继承配置
 		_.extend(this, options);
 
-		var _template = `<div class="m-section">
-			<h4 class="section_head">
-				<span><i class="u-icon ${this.icon}"></i>${this.title}</span>
-				<span class="section_more">更多<i class="u-icon u-icon-moreright"></i></span>
-			</h4>
-			<div class="section_cnt"></div>
-		</div>`;
+		var _template = App.template.m_section(this);
 
 		// 缓存节点
 		this.section = _.html2node(_template);

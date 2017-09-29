@@ -14,5 +14,5 @@
 /* 用户管理列表 */
 .m-user .user_list{display:none;position:absolute;z-index:999;top:0;left:-10px;width:calc(100% + 20px);padding:59px 0 0;border:1px solid #ddd;box-sizing:border-box;background:#fff;background-clip:content-box;}
 .m-user:hover .user_list{display:block;}
-.m-user .user_list li{text-indent:55px;padding:18px 0;line-height:1em;}
+.m-user .user_list li{text-indent:55px;padding:18px 0;line-height:1em;cursor:pointer;}
 .m-user .user_list li:hover{background:#eee;}

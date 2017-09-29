@@ -11,6 +11,11 @@
 		</ul>
 	</div>`;
 
+	/**
+	* options = {
+	*  loaction: dom节点，此组件载入的位置(必填)
+	* }
+	*/
 	function StarList(options){
 
 		// 继承配置
@@ -161,6 +166,8 @@
 		this.ul.addEventListener('click', this.followHandler.bind(this)); // 绑定关注事件
 		// 订阅事件
 		this.on('login', this.getstarlist.bind(this)); // 登录时，刷新明日之星列表
+		// 挂载组件
+		this.location.parentNode.replaceChild(this.container, this.location);
 	};
 
 	App.StarList = StarList;
