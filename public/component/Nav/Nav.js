@@ -25,6 +25,9 @@ if(!window.App || typeof window.App != 'object'){
 		this.init();
 	}
 
+	// 混入事件管理器
+	_.extend(Nav.prototype, App.emitter);
+
 	Nav.prototype._template = _.html2node(template);
 
 	Nav.prototype.init = function(){
@@ -32,7 +35,7 @@ if(!window.App || typeof window.App != 'object'){
 			// 先挂载 容器组件，不然Tabs的滑块offset定位不准确
 			this.parent.appendChild(this.container);
 			// 1.顶栏选项卡 组件
-			this.hdtab = new App.Tabs({parent: this.container});
+			this.hdtab = new App.Tabs({parent: this.container, index:this.getTabIndex()});
 			// 2.搜索框 组件
 			this.search = new App.Search({parent: this.container});
 			// 3.未登录显示的客人 组件
@@ -52,19 +55,34 @@ if(!window.App || typeof window.App != 'object'){
 				data = JSON.parse(data);
 				console.log(data);
 				if(data.code === 200){
-					// 显示用户组件
-					this.nUser.show(data.result);
-					// 隐藏客人组件
-					this.nGuest.hide();
+					// 触发登录事件
+					this.emit('login', data.result);
 				}
 				// 如果不是200，则隐藏User，显示Guest，默认就是如此，无需操作
+				else{
+					// 触发未登录事件
+					this.emit('notLogin');
+				}
 			}).bind(this),
 			fail: function(){
 				console.log('api/users?getloginuser 失败');
 			}
 		})
 	};
-	Nav.prototype.getTabIndex = function(){};
+	//  获取 tab的选中项的序号
+	Nav.prototype.getTabIndex = function(){
+		// 根据url 的path，决定 tab的index
+		if(/\/([^\/]+)/.test(location.pathname)){
+			switch (RegExp.$1){
+				// 首页
+				case 'index':
+					return 0;
+				// 作品页
+				case 'works':
+					return 1;
+			}
+		}
+	};
 
 	App.Nav = Nav;
 })(window.App);

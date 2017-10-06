@@ -18,6 +18,7 @@
 	function Select(options){
 		// 继承配置
 		_.extend(this, options);
+		
 		// 缓存节点
 		// 容器
 		this.body = _.html2node(template);

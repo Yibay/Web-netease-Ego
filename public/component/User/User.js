@@ -53,6 +53,7 @@ if(!window.App || typeof window.App != 'object'){
 		this.parent.appendChild(this.container);
 		// 订阅事件
 		this.on('login', this.show.bind(this)); // 登录事件
+		this.on('notLogin', this.hide.bind(this)); // 未登录事件
 		// 绑定事件
 		this.nLogout.addEventListener('click', this.logout.bind(this));
 	};

@@ -15,4 +15,9 @@
 @import url(../component/LoginModal/LoginModal.css);
 @import url(../component/RegisterModal/RegisterModal.css);
 
-/* 模块 */
+/* 布局样式 */
+.g-banner{height:365px;position:relative;}
+.g-body{width:1080px;margin:50px auto 0;}
+.g-main{width:760px;float:left;}
+.g-side{width:295px;float:right;}
+.g-footer{width:1080px;margin:0 auto;}

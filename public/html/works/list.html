@@ -6,10 +6,40 @@
     <meta name="description" content="ego"/>
     <meta name="keywords" content="ego"/>
     <title>ego</title>
+    <!-- 基础样式 -->
     <link href="../../common/base.css" rel="stylesheet"/>
+    <!-- 页面样式 -->
     <link href="../../pages/works/list.css" rel="stylesheet"/>
 </head>
 <body>
-<script src="../../pages/works/list.js"></script>
+	<!-- 顶栏 -->
+	<div class="g-header"></div>
+	<!-- banner -->
+	<div class="g-banner"></div>
+	<div class="g-body">
+		<!-- 简介组件 -->
+		<div class="g-profile m-profile"></div>
+		<div class="g-main">
+			<div class="m-aside"></div>
+			<div class="m-works"></div>
+		</div>
+	</div>
+	<!-- 工具函数 -->
+	<script src="../common/js/util.js"></script>
+	<!-- 事件管理器 -->
+	<script src="../common/js/emitter.js"></script>
+	<!-- 省市区代码 -->
+	<script src="../common/data/address_codes.js"></script>
+    <!-- 模板库 -->
+    <script src="../lib/handlebars-v4.0.10.js"></script>
+	<!-- 引入组件 -->
+	<script src="../component/Tabs/Tabs.js"></script>
+	<script src="../component/Search/Search.js"></script>
+	<script src="../component/Guest/Guest.js"></script>
+	<script src="../component/User/User.js"></script>
+	<script src="../component/Nav/Nav.js"></script>
+	<script src="../component/Profile/Profile.js"></script>
+	<!-- 引入页面逻辑 -->
+	<script src="../../pages/works/list.js"></script>
 </body>
 </html>

@@ -104,6 +104,7 @@
 
 	// 继承父类Modal的原型
 	RegisterModal.prototype = Object.create(App.Modal.prototype);
+	RegisterModal.prototype.constructor = RegisterModal;
 
 	// 混入事件管理器
 	_.extend(RegisterModal.prototype, App.emitter);

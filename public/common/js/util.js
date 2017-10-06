@@ -146,7 +146,7 @@
 		}
 		var select_data = mapping(data);
 		return select_data;
-	}
+	};
 	// 10. 以选择器data格式，生成日期数据 {name:,value:,list:}
 	_.createDateData = function(start_year, end_year){
 		// 默认值
@@ -175,7 +175,44 @@
 			select_data.unshift(year);
 		}
 		return select_data;
-	}
+	};
+	// 11. 计算年龄
+	_.calculateAge = function(birthday){
+		return parseInt((new Date().getTime() - new Date(birthday).getTime()) / 1000 / 3600 / 24 / 365, 10);
+	};
+	// 12. 查找城市名
+	_.searchCity = function(src, target){
+		src.some(function(item){
+			if(item[0] == target.province){
+				item[2].some(function(item){
+					if(item[0] == target.city){
+						target.city_name = item[1];
+						return true;
+					}
+				});
+				return true;
+			}
+		});
+		return target.city_name;
+	};
+	// 13. 计算星座
+	_.calculateZodiac = function(birthday){
+		birthday = birthday.split('-');
+		var month = Number(birthday[1]);
+		var day = Number(birthday[2]);
+		var user_zodiac;
+		var zodiac = [
+			[12,22,1,19,'摩羯'],[1,20,2,18,'水瓶'],[2,19,3,20,'双鱼'],[3,21,4,20,'白羊'],[4,21,5,20,'金牛'],[5,21,6,21,'双子'],
+			[6,22,7,22,'巨蟹'],[7,23,8,22,'狮子'],[8,23,9,22,'处女'],[9,23,10,22,'天秤'],[10,23,11,21,'天蝎'],[11,22,12,21,'射手']
+		];
+		zodiac.some(function(item){
+			if( (item[0] === month && item[1] <= day) || (item[2] === month && item[3] >= day) ){
+				user_zodiac = item[4];
+				return true;
+			}
+		});
+		return user_zodiac;
+	};
 
 	// 把工具函数对象 绑定到 全局变量上。
 	global._ = _;

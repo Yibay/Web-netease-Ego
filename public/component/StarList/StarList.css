@@ -17,4 +17,4 @@
 .m-card .u-btn.z-follow:hover:after{content:'取消关注';position:absolute;left:0;right:0;top:0;bottom:0;background:#5ed0ba;color:#fff;line-height:24px;}
 .m-card .u-btn .u-icon{font-size:12px;color:#fff;}
 .m-card .u-btn.z-follow .u-icon{color:#5ed0ba;}
-.m-card .u-icon-tianjia{margin-right:5px;}
+.m-card .u-icon-add{margin-right:5px;}

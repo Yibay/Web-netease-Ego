@@ -7,13 +7,9 @@ ul{list-style:none;}
 a{text-decoration:none;}
 input{outline:none;}
 button{margin:0;padding:0;outline:none;cursor:pointer;}
+em{font-style:normal;}
 /* 布局样式 */
 .g-header{height:90px;border: 1px solid #fff;box-sizing:border-box;background-color:#fff;}
-.g-banner{height:365px;position:relative;}
-.g-body{width:1080px;margin:50px auto 0;}
-.g-main{width:760px;float:left;}
-.g-side{width:295px;float:right;}
-.g-footer{width:1080px;margin:0 auto;}
 /* 元件样式 */
 	/* 字体图标 */
 .u-icon-female{color:#e55f48;}
@@ -23,6 +19,7 @@ button{margin:0;padding:0;outline:none;cursor:pointer;}
 .u-icon-pencle{width:32px;height:32px;background:url(../res/images/iconfont/u-icon-pencle.png) center/100% 100% no-repeat;}
 .u-icon-people{width:40px;height:40px;background:url(../res/images/iconfont/u-icon-people.png) center/100% 100% no-repeat;}
 .u-icon-errorsquare{color:red;}
+.u-icon-address{color:#e15f48;}
 	/* 表单样式 */
 .u-formitem{margin:10px 0;white-space:nowrap;}
 .u-formitem .formitem_tt{float:left;width:60px;font-size:12px;line-height:40px;}

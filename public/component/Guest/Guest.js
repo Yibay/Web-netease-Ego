@@ -6,7 +6,7 @@ if(!window.App || typeof window.App != 'object'){
 (function(App){
 
 	//模板
-	var template = `<div class="m-guest" id="guest">
+	var template = `<div class="m-guest f-dn" id="guest">
 		<button class="u-btn u-btn-primary u-btn-icon" id="login">
 			<i class="u-icon u-icon-user"></i>登录
 		</button>
@@ -40,6 +40,7 @@ if(!window.App || typeof window.App != 'object'){
 	Guest.prototype.init = function(){
 		// 订阅事件
 		this.on('login', this.hide.bind(this)); // 登录事件
+		this.on('notLogin', this.show.bind(this)); // 未登录事件
 		// 绑定事件
 		this.nLogin.addEventListener('click', (function(){
 			// 弹出登录弹窗

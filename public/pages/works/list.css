@@ -1,0 +1,16 @@
+/* 首页 */
+
+/* 引入模块化 组件样式 */
+@import url(../../component/Tabs/Tabs.css);
+@import url(../../component/Search/Search.css);
+@import url(../../component/Guest/Guest.css);
+@import url(../../component/User/User.css);
+@import url(../../component/Nav/Nav.css);
+@import url(../../component/Profile/Profile.css);
+
+/* 页面样式 */
+.g-banner{height:250px;background:url(../../res/images/banner4.jpg) 50% 50%/cover no-repeat;}
+.g-body{width:850px;margin:0 auto;}
+.g-profile{height:216px;margin-top:-115px;background-color:#fff;}
+.g-main{position:relative;height:600px;background-color:#4ca7cc;}
+.m-aside{position:absolute;left:-100px;width:100px;height:276px;background-color:#ffae35;}

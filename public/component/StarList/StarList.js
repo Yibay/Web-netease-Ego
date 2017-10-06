@@ -57,12 +57,12 @@
 	var followConfig = [
 		{
 			class: '',
-			icon: 'u-icon-tianjia',
+			icon: 'u-icon-add',
 			text: '关注'
 		},
 		{
 			class: 'z-follow',
-			icon: 'u-icon-duihao',
+			icon: 'u-icon-right',
 			text: '已关注'
 		}
 	];

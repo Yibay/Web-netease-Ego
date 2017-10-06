@@ -1,0 +1,13 @@
+/* 用户简介 组件样式 */
+.m-profile{padding-top:27px;box-sizing:border-box;text-align:center;}
+/* 头像 */
+.m-profile .u-avatar{height:111px;background:url(../../res/images/avatar.png) 50% 50%/contain no-repeat;}
+/* 用户信息 */
+.m-profile .u-info{margin:12px 0;line-height:1em;font-size:11px;color:#727171;}
+/* 名称与性别 */
+.m-profile em,.m-profile span{display:inline-block;}
+.m-profile .name{display:inline-block;max-width:75px;overflow:hidden;text-overflow:ellipsis;font-size:15px;color:#000;font-weight:900;}
+.m-profile .u-icon{font-size:18px;font-weight:900;}
+/* 年龄、星座、地址 */
+.m-profile .constellation{margin-left:3px;}
+.m-profile .u-icon-address{margin-left:13px;font-size:13px;}

@@ -19,10 +19,12 @@ if(!window.App || typeof window.App != 'object'){
 		</div>
 	</div>`;
 
-	// options 参数说明
-	// {
-	//   parent: dom节点, 父容器 (必填)
-	// }）
+	/** options 参数说明
+	* {
+	*   parent: dom节点, 父容器 (必填)
+	*   index: num类型，Tab选中项的序号 
+	* }
+	*/
 	function Tabs(options){
 		// 继承配置
 		_.extend(this, options);

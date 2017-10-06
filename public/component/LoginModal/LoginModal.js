@@ -59,6 +59,7 @@
 
 	// 继承父类Modal的原型
 	LoginModal.prototype = Object.create(App.Modal.prototype);
+	LoginModal.prototype.constructor = LoginModal;
 
 	// 混入事件管理器
 	_.extend(LoginModal.prototype, App.emitter);
