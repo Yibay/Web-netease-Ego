@@ -7,10 +7,15 @@
 @import url(../../component/User/User.css);
 @import url(../../component/Nav/Nav.css);
 @import url(../../component/Profile/Profile.css);
+@import url(../../component/WorksList/WorksList.css);
+@import url(../../component/Pagination/Pagination.css);
 
 /* 页面样式 */
 .g-banner{height:250px;background:url(../../res/images/banner4.jpg) 50% 50%/cover no-repeat;}
-.g-body{width:850px;margin:0 auto;}
+.g-body{width:744px;margin:0 auto;}
+/* 作者简介 */
 .g-profile{height:216px;margin-top:-115px;background-color:#fff;}
-.g-main{position:relative;height:600px;background-color:#4ca7cc;}
+/* 主内容区 */
+.g-main{position:relative;padding-bottom:28px;margin-bottom:48px;background-color:#fff;}
 .m-aside{position:absolute;left:-100px;width:100px;height:276px;background-color:#ffae35;}
+.g-wrap{margin:0 14px;padding:0 36px;min-height:300px;border-top:1px solid #e2e3e3;box-sizing:border-box;}

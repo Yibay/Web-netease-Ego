@@ -1,3 +1,4 @@
+// 作品列表页
 (function(App){
 
 	var page = {
@@ -12,6 +13,8 @@
 			this.initNav();
 			// 用户简介
 			this.initProfile();
+			// 作品列表
+			this.initWorksList();
 		},
 
 		// 初始化顶栏
@@ -22,7 +25,12 @@
 		// 初始化用户简介
 		initProfile: function(){
 			// 构建用户简介
-			new App.Profile({parent: _.getElementsByClassName(document, 'g-profile')[0]})
+			new App.Profile({parent: _.getElementsByClassName(document, 'g-profile')[0]});
+		},
+		// 作品列表
+		initWorksList: function(){
+			// 构建作品列表
+			new App.WorksList({parent: _.getElementsByClassName(document, 'g-wrap')[0]});
 		}
 	}
 

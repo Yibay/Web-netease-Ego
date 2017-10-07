@@ -1,10 +1,10 @@
 /* 字体图标 */
 @import url(./font/iconfont.css);
 /* Reset */
-html,body,ul,h4{margin:0;padding:0;}
+html,body,ul,h3,h4{margin:0;padding:0;}
 body{background:#efefef;}
 ul{list-style:none;}
-a{text-decoration:none;}
+a{text-decoration:none;color:inherit;}
 input{outline:none;}
 button{margin:0;padding:0;outline:none;cursor:pointer;}
 em{font-style:normal;}
