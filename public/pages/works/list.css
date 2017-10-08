@@ -9,6 +9,7 @@
 @import url(../../component/Profile/Profile.css);
 @import url(../../component/WorksList/WorksList.css);
 @import url(../../component/Pagination/Pagination.css);
+@import url(../../component/Aside/Aside.css);
 
 /* 页面样式 */
 .g-banner{height:250px;background:url(../../res/images/banner4.jpg) 50% 50%/cover no-repeat;}
@@ -17,5 +18,5 @@
 .g-profile{height:216px;margin-top:-115px;background-color:#fff;}
 /* 主内容区 */
 .g-main{position:relative;padding-bottom:28px;margin-bottom:48px;background-color:#fff;}
-.m-aside{position:absolute;left:-100px;width:100px;height:276px;background-color:#ffae35;}
+.m-aside{position:absolute;left:-100px;width:100px;height:276px;background-color:#fff;}
 .g-wrap{margin:0 14px;padding:0 36px;min-height:300px;border-top:1px solid #e2e3e3;box-sizing:border-box;}

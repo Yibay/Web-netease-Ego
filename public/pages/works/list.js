@@ -15,6 +15,8 @@
 			this.initProfile();
 			// 作品列表
 			this.initWorksList();
+			// 侧边栏
+			this.initAside();
 		},
 
 		// 初始化顶栏
@@ -31,6 +33,10 @@
 		initWorksList: function(){
 			// 构建作品列表
 			new App.WorksList({parent: _.getElementsByClassName(document, 'g-wrap')[0]});
+		},
+		// 侧边栏
+		initAside: function(){
+			App.Aside.init({parent: _.getElementsByClassName(document, 'm-aside')[0]});
 		}
 	}
 

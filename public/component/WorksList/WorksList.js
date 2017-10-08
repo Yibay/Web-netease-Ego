@@ -47,10 +47,11 @@
 
 	WorksList.prototype.init = function(){
 		// 渲染列表头
-		this.parent.appendChild(_.html2node(template_title));
+		this.title = _.html2node(template_title);
+		this.parent.appendChild(this.title);
 		// 添加Loading图标
 		this.loading = _.html2node(`<img class="f-dn" src="../../res/images/loading.gif" />`);
-		this.parent.appendChild(this.loading);
+		this.title.appendChild(this.loading);
 		// 获取列表信息
 		this.getWorksList();
 	};
@@ -65,6 +66,8 @@
 	WorksList.prototype.getWorksList = function(options){
 		// 防止options undefined
 		options = options || {};
+		// 隐藏已有数据列表
+		this.workList && _.addClassName(this.workList, 'f-vh');
 		// 显示Loading图标
 		_.delClassName(this.loading, 'f-dn');
 		_.ajax({

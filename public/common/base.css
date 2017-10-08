@@ -39,5 +39,6 @@ em{font-style:normal;}
 .u-error span + span{margin-left:8px;}
 /* 功能 */
 .f-cb::before,.f-cb::after{display:table;content:'';clear:both;}
-.f-dn{display:none;}
+.f-dn{display:none!important;}
 .f-tac{text-align:center;}
+.f-vh{visibility:hidden;}

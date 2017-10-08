@@ -1,0 +1,5 @@
+/* 侧边栏组件 样式 */
+.m-aside li{width:101px;height:46px;line-height:46px;text-align:center;font-size:11px;color:#5ed0ba;background:#fdfdfd;}
+.m-aside li.z-active{background:#5ed0ba;color:#fff;}
+.m-aside li.msg{position:relative;}
+.m-aside li.msg::before{content:'';position:absolute;top:5px;right:8px;z-index:99;width:8px;height:8px;-webkit-border-radius:50%;border-radius:50%;background:#e55f48;}
