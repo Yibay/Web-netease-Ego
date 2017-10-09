@@ -1,0 +1,21 @@
+/* 标签组件 样式 */
+.m-tag{margin-top:23px;padding-left:161px;}
+.m-tag li{display:inline-block;border:1px solid #5ed0ba;border-radius:3px;text-align:center;cursor:pointer;}
+/* 选中标签组 */
+.m-tag .tag_title{float:left;width:66px;height:26px;line-height:26px;font-size:14px;font-weight:500;}
+.m-tag .tag_list{overflow:hidden;}
+.m-tag .tag_list li{position:relative;margin-left:10px;margin-bottom:8px;padding:0 10px;height:26px;line-height:26px;font-size:10px;color:#5ed0ba;background-color:#fff;}
+.m-tag .tag_list li:hover::before{content:'x';position:absolute;top:0;right:2px;line-height:1em;font-size:8px;font-weight:500;color:#dcdddd;}
+/* 自定义标签 */
+.m-tag .tag_list li.add_tag{padding:0;width:92px;white-space:nowrap;}
+.m-tag .tag_list li.add_tag:hover::before{content:'';}
+/* 自定义标签输入框 */
+.m-tag .tag_list li.add_tag input{height:100%;width:100%;padding:0;border:none;box-sizing:border-box;text-indent:.5em;}
+/* 自定义标签按钮 */
+.m-tag .tag_list li.add_tag span{display:inline-block;height:100%;width:100%;text-align:center;}
+.m-tag .tag_list li.add_tag span::before{content:'+ ';}
+/* 推荐标签组 */
+.m-tag .tag_recommend{display:block;margin-top:30px;margin-bottom:10px;font-size:14px;color:#5ed0ba;line-height:1em;}
+.m-tag .tag_recommendlist{margin-bottom:55px;margin-left:-8px;}
+.m-tag .tag_recommendlist li{margin-left:8px;margin-bottom:8px;padding:0 12px;height:28px;line-height:28px;font-size:12px;color:#fff;background-color:#5ed0ba;}
+.m-tag .tag_recommendlist li::before{content:'+ ';font-size:12px;line-height:28px;}

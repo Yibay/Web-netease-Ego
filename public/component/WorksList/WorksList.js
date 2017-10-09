@@ -8,7 +8,7 @@
 	var template_title = `
 		<div class="m-workstitle">
 			<div class="title">/我发表的作品/</div>
-			<button class="u-btn">上传作品</button>
+			<button class="u-btn"><a href="/works/create">上传作品</a></button>
 		</div>`;
 
 	var template = Handlebars.compile(`

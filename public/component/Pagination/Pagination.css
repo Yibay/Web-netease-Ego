@@ -2,7 +2,7 @@
 .m-pagination{margin-top:27px;text-align:center;}
 .m-pagination li{display:inline-block;margin-left:25px;font-size:11px;line-height:32px;text-align:center;color:#5eccb6;cursor:pointer;}
 /* 当前选中状态 */
-.m-pagination li.z-active{width:29px;height:32px;margin-left:10px;background:#5eccb6;color:#fff;}
+.m-pagination li.z-active{width:29px;height:32px;margin-left:10px;background:url(../../res/images/page-active.png) 50% 50%/100% 100% no-repeat;color:#fff;}
 .m-pagination li.z-active + li{margin-left:14px;}
 /* 禁止点击状态 */
 .m-pagination li.disable{cursor:no-drop;}
