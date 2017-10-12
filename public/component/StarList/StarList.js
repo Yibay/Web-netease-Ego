@@ -85,6 +85,10 @@
 	// 关注按钮事件管理
 	StarList.prototype.followHandler = function(evt){
 		var target = evt.target;
+		// 若点中 加号 小图标
+		if(target.tagName !== 'BUTTON' && target.parentNode.tagName === 'BUTTON' ){
+			target = target.parentNode;
+		}
 		console.dir(target);
 		if(target.tagName === 'BUTTON'){
 			// 未登录的情况

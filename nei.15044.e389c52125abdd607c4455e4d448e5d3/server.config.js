@@ -11,9 +11,8 @@ module.exports = {
     viewRoot: '/Users/zhouquan/workspace/nodeProgram/网易Mini/public/html/',
     /* 路由 */
     routes: {
-      //"ALL /api/*": "代理所有接口, 这里输入代理服务器地址",
-      "ALL /api/*": "http://59.111.99.234",
-      "ALL /captcha": "http://59.111.99.234",
+      "ALL /api/*": "http://59.111.99.234/",
+      "GET /captcha": "http://59.111.99.234/",
       "GET /works/detail/:id": { name: '作品详情页面', index: 0, list: [{"id":13096,"path":"works/detail"}] },
       "GET /works/create": { name: '作品创建页面', index: 0, list: [{"id":13081,"path":"works/create"}] },
       "GET /works": { name: '作品列表页面', index: 0, list: [{"id":13079,"path":"works/list"}] },
@@ -35,7 +34,7 @@ module.exports = {
       //       "POST /api/register": { path: 'post/api/register/data', id: 28507, group: '用户' },
       //       "POST /api/logout": { path: 'post/api/logout/data', id: 28525, group: '用户' },
       //       "POST /api/login": { path: 'post/api/login/data', id: 28516, group: '用户' },
-    },
+          },
     /* 注入给页面的模型数据的服务器配置 */
     // modelServer: {
     //     // 完整的主机地址，包括协议、主机名、端口
@@ -52,11 +51,6 @@ module.exports = {
     // },
     /* api 响应头 */
     apiResHeaders: {
-        // 设置可跨域访问时，取消注释以下内容, 并按需要配置
-        // 'Access-Control-Allow-Origin': 'http://localhost:8080',
-        // 'Access-Control-Allow-Credentials': 'true',
-        // 'Access-Control-Allow-Headers': 'Content-Type',
-        // 'Access-Control-Allow-Methods': 'GET, POST, HEAD, OPTIONS, PUT, DELETE, PATCH'
     },
     /* 是否自动打开浏览器 */
     launch: true,
