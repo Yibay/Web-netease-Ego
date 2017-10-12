@@ -11,6 +11,8 @@
 			});
 			// 顶栏
 			this.initNav();
+			// 上传图片模块
+			this.initUploadPictures();
 			// 标签
 			this.initTag();
 		},
@@ -19,6 +21,11 @@
 		initNav: function(){
 			// 构建顶栏
 			new App.Nav({parent: _.getElementsByClassName(document, 'g-header')[0]});
+		},
+		// 初始化上传图片组件
+		initUploadPictures: function(){
+			// 构建上传图片
+			new App.UploadPictures({parent: _.getElementsByClassName(document, 'g-main')[0]});
 		},
 		// 初始化标签
 		initTag: function(){
@@ -41,7 +48,6 @@
 			});
 		}
 	}
-
 
 	document.addEventListener('DOMContentLoaded', function(e){
 		page.init();

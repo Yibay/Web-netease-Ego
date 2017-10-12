@@ -1,0 +1,11 @@
+/* 上传图片组件 样式 */
+.m-uploadpictures{padding-top:15px;}
+.m-uploadpictures .upload_controller{padding-bottom:4px;}
+/* 标题 */
+.m-uploadpictures .upload_title{float:left;margin-left:31px;width:88px;line-height:40px;font-size:11px;font-weight:700;}
+/* 上传按钮 */
+.m-uploadpictures .upload_btn{width:auto;padding:0 24px;font-size:11px;cursor:pointer;}
+.m-uploadpictures .upload_input{display:none;}
+.m-uploadpictures .prompt_box{font-size:10px;}
+/* 图片控制器 */
+.m-uploadpictures .pictures_controller{min-height:80px;border-top:2px solid #e9eaea;border-bottom:2px solid #e9eaea;background:#f7f8f8;}

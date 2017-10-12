@@ -64,6 +64,8 @@
 		* 	success: func,  请求成功后, 执行函数
 		* 	fail: func,     请求失败后, 执行函数
 		*   header: {}      请求头(选填)
+		*   withCredentials: boolean  是否带cookie身份认证(选填，默认false)
+		*   finish_data: obj 直接xhr.send(finish_data)，不做处理
 		* }
 		*/
 	_.ajax = function(options){
@@ -86,6 +88,12 @@
 
 		var data;
 
+		// 若需身份认证，带上cookie
+		if(options.withCredentials){
+			// 跨域请求
+			xhr.withCredentials = true;
+		}
+
 		// 若是 GET 请求
 		if(options.method.toUpperCase() === 'GET'){
 			var search = options.data ? ('?' + _.serialize(options.data)) : '';
@@ -107,7 +115,12 @@
 				xhr.setRequestHeader(key, options.header[key]);
 			}
 		}
-		console.log(data);
+
+		// 若有finish_data，
+		if(options.finish_data){
+			data = options.finish_data;
+		}
+
 		// 2. 发送请求 
 		xhr.send(data);
 	};
