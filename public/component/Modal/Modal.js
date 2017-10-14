@@ -15,6 +15,7 @@ if(!window.App || typeof window.App != 'object'){
 	/* options 参数说明
 	*{
 	*	parent: dom节点, 父容器（必填）
+	*   content: 内容str (选填)
 	*}
 	*/
 	function Modal(option){

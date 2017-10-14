@@ -3,9 +3,26 @@
 .m-uploadpictures .upload_controller{padding-bottom:4px;}
 /* 标题 */
 .m-uploadpictures .upload_title{float:left;margin-left:31px;width:88px;line-height:40px;font-size:11px;font-weight:700;}
+/*  */
 /* 上传按钮 */
-.m-uploadpictures .upload_btn{width:auto;padding:0 24px;font-size:11px;cursor:pointer;}
+.m-uploadpictures .upload_btn{float:left;width:auto;padding:0 24px;font-size:11px;cursor:pointer;}
+.m-uploadpictures .upload_btn.f-pen{background:#cbcbcb;border-color:#cbcbcb;}
 .m-uploadpictures .upload_input{display:none;}
 .m-uploadpictures .prompt_box{font-size:10px;}
+/* 进度条 */
+.m-uploadpictures progress{height:40px;margin-left:10px;}
 /* 图片控制器 */
-.m-uploadpictures .pictures_controller{min-height:80px;border-top:2px solid #e9eaea;border-bottom:2px solid #e9eaea;background:#f7f8f8;}
+.m-uploadpictures .pictures_controller{min-height:84px;padding-left:78px;padding-top:35px;border-top:2px solid #e9eaea;border-bottom:2px solid #e9eaea;background:#f7f8f8;box-sizing:border-box;}
+.m-uploadpictures .pictures_controller li{float:left;position:relative;margin-bottom:10px;margin-right:27px;padding-bottom:40px;}
+/* 图片 */
+.m-uploadpictures .pictures_controller img{width:101px;height:140px;}
+/* 设为封面、已设为封面的按钮 */
+.m-uploadpictures .pictures_controller button,.m-uploadpictures .pictures_controller button + button{display:none;position:absolute;bottom:8px;left:5%;width:90%;height:30px;line-height:30px}
+.m-uploadpictures .pictures_controller li:hover button{display:block;}
+.m-uploadpictures .pictures_controller li:hover button + button{display:none;}
+.m-uploadpictures .pictures_controller li.z-active{pointer-events:none;}
+.m-uploadpictures .pictures_controller li.z-active button + button{display:block;}
+/* 移除图片的按钮 */
+.m-uploadpictures .pictures_controller li .hover_bg{display:none;position:absolute;top:0;left:0;width:101px;height:140px;background:rgba(0,0,0,0.2);}
+.m-uploadpictures .pictures_controller li:hover .hover_bg{display:block;}
+.m-uploadpictures .pictures_controller .u-icon{position:absolute;top:2px;right:2px;font-weight:900;color:#fff;cursor:pointer;}

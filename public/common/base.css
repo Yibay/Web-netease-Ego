@@ -43,3 +43,4 @@ em{font-style:normal;}
 .f-tac{text-align:center;}
 .f-vh{visibility:hidden;}
 .f-oh{overflow:hidden;}
+.f-pen{pointer-events:none;}/* 点击穿透 */

@@ -15,6 +15,8 @@
 			this.initUploadPictures();
 			// 标签
 			this.initTag();
+			// 警告弹窗
+			this.initAlertModal();
 		},
 
 		// 初始化顶栏
@@ -46,6 +48,10 @@
 					}
 				}
 			});
+		},
+		// 初始化注册弹窗
+		initAlertModal: function(){
+			new App.AlertModal({parent: document.body});
 		}
 	}
 

@@ -123,7 +123,6 @@
 			// 从视图中移除
 			evt.target.parentNode.removeChild(evt.target);
 		}
-		console.log(this.list);
 	}
 	//  添加事件
 	Tag.prototype.addEvent = function(){

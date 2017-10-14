@@ -1,0 +1,10 @@
+/* 警告弹窗组件 样式 */
+.m-alertmodal{position:relative;width:408px;padding:10px 12px;border:1px solid #a8a8a8;box-sizing:border-box;}
+/* 关闭弹窗按钮 */
+.m-alertmodal .close_btn{position:absolute;right:9px;top:9px;font-size:15px;color:#c0c0c1;cursor:pointer;}
+/* 标题 */
+.m-alertmodal .modal_tt{margin-bottom:10px;line-height:1em;color:#5ed0ba;font-size:15px;}
+/* 内容 */
+.m-alertmodal .modal_ct{padding-top:5px;border-top:1px solid #e9eaea;text-align:center;}
+.m-alertmodal .modal_ct .alert_msg{font-size:14px;}
+.m-alertmodal .modal_ct .u-btn{width:90px;margin-top:24px;margin-bottom:5px;}
