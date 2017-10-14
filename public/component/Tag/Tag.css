@@ -2,7 +2,7 @@
 .m-tag{margin-top:23px;padding-left:161px;}
 .m-tag li{display:inline-block;border:1px solid #5ed0ba;border-radius:3px;text-align:center;cursor:pointer;}
 /* 选中标签组 */
-.m-tag .tag_title{float:left;width:66px;height:26px;line-height:26px;font-size:14px;font-weight:500;}
+.m-tag .tag_title{float:left;width:66px;height:26px;line-height:26px;font-size:12px;font-weight:500;}
 .m-tag .tag_list{overflow:hidden;}
 .m-tag .tag_list li{position:relative;margin-left:10px;margin-bottom:8px;padding:0 10px;height:26px;line-height:26px;font-size:10px;color:#5ed0ba;background-color:#fff;}
 .m-tag .tag_list li:hover::before{content:'x';position:absolute;top:0;right:2px;line-height:1em;font-size:8px;font-weight:500;color:#dcdddd;}

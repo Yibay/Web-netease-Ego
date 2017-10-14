@@ -5,7 +5,7 @@ html,body,ul,h3,h4{margin:0;padding:0;}
 body{background:#efefef;}
 ul{list-style:none;}
 a{text-decoration:none;color:inherit;}
-input{outline:none;}
+input,textarea{outline:none;}
 button{margin:0;padding:0;outline:none;cursor:pointer;}
 em{font-style:normal;}
 /* 布局样式 */

@@ -1,0 +1,11 @@
+/* 作品分类组件 样式 */
+.m-classificworks{margin:0 13px;padding: 15px 0;border-bottom:2px solid #f2f2f2;}
+.m-classificworks label{float:left;font-size:11px;}
+/* 组件标题 */
+.m-classificworks .classific_title{margin-left:17px;width:88px;line-height:40px;font-weight:700;}
+/* 隐藏组件单选按钮 */
+.m-classificworks input[type=radio]{display:none;}
+/* 自定义组件单选按钮 */
+.m-classificworks .u-btn{padding:0 30px;width:auto;color:#5ed0ba;cursor:pointer;}
+.m-classificworks input[type=radio]:checked + .u-btn{background:#5ed0ba;color:#fff;}
+.m-classificworks .classific_radio + .classific_radio{margin-left:34px;}

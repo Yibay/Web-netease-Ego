@@ -1,0 +1,11 @@
+/* 作品名称、作品描述组件 */
+.m-workdescription{padding-left:161px;padding-top:27px;}
+.m-workdescription .f-cb + .f-cb{margin-top:25px;}
+/* 标题 */
+.m-workdescription label{float:left;width:77px;font-size:12px;font-weight:500;line-height:38px;}
+/* 输入框 */
+.m-workdescription input,.m-workdescription textarea{-webkit-border-radius:0;border-radius:0;}
+.m-workdescription input{height:38px;width:294px;}
+.m-workdescription textarea{width:404px;height:104px;padding:15px;box-sizing:border-box;text-indent:0;}
+/* 提示框 */
+.m-workdescription .prompt_msg{margin-left:28px;font-size:11px;color:red;}

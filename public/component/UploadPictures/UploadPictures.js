@@ -290,8 +290,8 @@
 	// 6.获取图片列表信息
 	UploadPictures.prototype.getValue = function(){
 		return {
-			coverId: this.coverImg.id, // 封面id
-			coverUrl: this.coverImg.url, // 封面url
+			coverId: this.coverImg ? this.coverImg.id : undefined, // 封面id
+			coverUrl: this.coverImg ? this.coverImg.url : undefined, // 封面url
 			pictures: this.picture_list.map(function(item, index){ // 图片列表
 				var picture = {};
 				for(key in item){
