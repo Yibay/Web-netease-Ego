@@ -4,7 +4,7 @@
 	// 模板
 	var template = `<div class="m-select">
 		<div class="select_hd">
-			<span class="select_val">北京</span>
+			<span class="select_val"></span>
 			<span class="u-icon u-icon-dropdown"></span>
 		</div>
 		<ul class="select_opt f-dn"></ul>
@@ -35,7 +35,7 @@
 	_.extend(Select.prototype, App.emitter);
 
 	// 0. 渲染下拉列表
-	Select.prototype.render = function(data, defaultIndex){
+	Select.prototype.render = function(data, defaultIndex){  // data: [{name:,value:,list:}]
 		// 更新下拉列表
 		var optionsHTML = '';
 		data = data || []; // 若data为null，则默认空数组

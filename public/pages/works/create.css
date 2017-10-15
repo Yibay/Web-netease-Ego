@@ -12,11 +12,14 @@
 @import url(../../component/AlertModal/AlertModal.css);
 @import url(../../component/WorkDescription/WorkDescription.css);
 @import url(../../component/Tag/Tag.css);
+@import url(../../component/Select/Select.css);
+@import url(../../component/Radio/Radio.css);
+@import url(../../component/WorkPermission/WorkPermission.css);
 
 /* 页面样式 */
-.g-body{width:1098px;margin:54px auto 0;}
+.g-body{width:1098px;margin:54px auto 50px;}
 .g-main,.g-side{border:1px solid #e0e1e1;box-sizing:border-box;}
 /* 主栏 */
 .g-main{float:left;position:relative;width:770px;padding-bottom:78px;background:#fff;}
 .g-main .subimit{position:absolute;left:161px;bottom:40px;width:101px;}
-.g-side{float:right;width:316px;background:#f7f8f8;}
+.g-side{float:right;width:316px;padding-left:20px;padding-right:28px;box-sizing:border-box;background:#f7f8f8;}

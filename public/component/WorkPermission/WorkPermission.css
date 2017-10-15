@@ -1,0 +1,7 @@
+/* 权限设置 组件样式 */
+.m-privilege label{display:inline-block;margin-bottom:28px;margin-top:27px;font-size:13px;}
+/* 作品授权 组件样式 */
+.m-authorization label{display:inline-block;margin-bottom:15px;font-size:13px;}
+.m-authorization .m-select{margin-bottom:42px;height:39px;}
+.m-authorization .m-select .select_hd{background:#fff;}
+.m-authorization .m-select .select_opt{height:60px;}

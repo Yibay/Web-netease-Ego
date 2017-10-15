@@ -1,0 +1,9 @@
+/* 单选框组件 */
+.m-radio li label{margin-top:0;margin-bottom:21px;font-size:11px;line-height:16px;color:#848383;cursor:pointer;}
+/* 隐藏单选按钮 */
+.m-radio li input[type=radio]{display:none;}
+/* 自定义单选按钮样式 */
+.m-radio li .u-icon{float:left;margin-right:8px;color:#5ed0ba;}
+.m-radio li input[type=radio] ~ .u-icon-radio{display:none;}
+.m-radio li input[type=radio]:checked ~ .u-icon-radio{display:block;}
+.m-radio li input[type=radio]:checked ~ .u-icon-radiocircle{display:none;}
