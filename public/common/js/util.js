@@ -104,8 +104,8 @@
 		// 1. 开启请求
 		xhr.open(options.method, options.url, true);
 
-		// 若是 POST 请求
-		if(options.method.toUpperCase() === 'POST'){
+		// 若是 POST 请求 或 PATCH请求
+		if(options.method.toUpperCase() === 'POST' || options.method.toUpperCase() === 'PATCH'){
 			data = options.data ? JSON.stringify(options.data) : null;
 		}
 

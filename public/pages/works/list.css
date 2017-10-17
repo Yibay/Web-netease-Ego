@@ -10,6 +10,8 @@
 @import url(../../component/WorksList/WorksList.css);
 @import url(../../component/Pagination/Pagination.css);
 @import url(../../component/Aside/Aside.css);
+@import url(../../component/Modal/Modal.css);
+@import url(../../component/ConfirmModal/ConfirmModal.css);
 
 /* 页面样式 */
 .g-banner{height:250px;background:url(../../res/images/banner4.jpg) 50% 50%/cover no-repeat;}

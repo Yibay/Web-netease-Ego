@@ -1,4 +1,4 @@
-// 作品列表页
+// 作品创建页
 (function(App){
 
 	var page = {
@@ -135,7 +135,11 @@
 				success: function(res){
 					res = JSON.parse(res);
 					console.log(res);
-					console.log()
+					// 上传成功
+					if(res.code === 200){
+						// 跳转回列表页
+						location.assign('/works');
+					}
 				},
 				fail: function(e){
 					console.log(e);

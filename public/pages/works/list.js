@@ -17,6 +17,8 @@
 			this.initWorksList();
 			// 侧边栏
 			this.initAside();
+			// 确认弹窗
+			this.initConfirmModal();
 		},
 
 		// 初始化顶栏
@@ -37,6 +39,10 @@
 		// 侧边栏
 		initAside: function(){
 			App.Aside.init({parent: _.getElementsByClassName(document, 'm-aside')[0]});
+		},
+		// 确认弹窗
+		initConfirmModal: function(){
+			new App.ConfirmModal({parent: document.body});
 		}
 	}
 
