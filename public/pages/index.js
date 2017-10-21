@@ -64,9 +64,10 @@
 				})
 			});
 			// 活动进行时
-			// html += App.template.m_section({
-			// 	icon:
-			// });
+			html += App.template.m_section({
+				icon: 'u-icon-time',
+				title: '/ 活 动 进 行 时 /'
+			});
 
 			// 我们都爱原创
 			html += App.template.m_section({

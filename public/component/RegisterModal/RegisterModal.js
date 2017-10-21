@@ -152,7 +152,7 @@
 		// 验证两次密码
 		if(isValid && this.pwd.value !== this.confirmpwd.value){
 			isValid = false;
-			errorMsg = '2次验证码不一致';
+			errorMsg = '2次密码不一致';
 		}
 		
 		// 验证条款是否为空
