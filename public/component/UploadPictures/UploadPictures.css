@@ -10,7 +10,8 @@
 .m-uploadpictures .upload_input{display:none;}
 .m-uploadpictures .prompt_box{font-size:10px;}
 /* 进度条 */
-.m-uploadpictures progress{height:40px;margin-left:10px;}
+.m-uploadpictures progress{float:left;height:40px;margin-left:10px;}
+.m-uploadpictures .progress_msg{float:left;margin-left:10px;height:40px;line-height:40px;font-size:12px;}
 /* 图片控制器 */
 .m-uploadpictures .pictures_controller{min-height:84px;padding-left:78px;padding-top:35px;border-top:2px solid #e9eaea;border-bottom:2px solid #e9eaea;background:#f7f8f8;box-sizing:border-box;}
 .m-uploadpictures .pictures_controller li{float:left;position:relative;margin-bottom:10px;margin-right:27px;padding-bottom:40px;}

@@ -13,7 +13,7 @@ if(!window.App || typeof window.App != 'object'){
 		},
 		// 2. 验证电话号码
 		isPhone: function(value){
-			return /\d{11}/.test(value);
+			return /^\d{11}$/.test(value);
 		},
 		// 3. 验证昵称
 		isNickName: function(value){

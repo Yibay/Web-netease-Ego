@@ -26,7 +26,7 @@
 			// 构建精选推荐
 			html += App.template.m_section({
 				icon: 'u-icon-diamond',
-				title: '/精选推荐/',
+				title: '/ 精 选 推 荐 /',
 				cnt: App.template.list_img({
 					list_type: 'm-list-4',
 					list: [
@@ -40,13 +40,13 @@
 			// 明日之星
 			html += App.template.m_section({
 				icon: 'u-icon-star',
-				title: '/明日之星/',
+				title: '/ 明 日 之 星 /',
 				cnt: '<div id="star_list" class="section_cnt"></div>'
 			});
 			// 构建最新作品
 			html += App.template.m_section({
 				icon: 'u-icon-work',
-				title: '/最新作品/',
+				title: '/ 最 新 作 品 /',
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [
@@ -64,11 +64,14 @@
 				})
 			});
 			// 活动进行时
+			// html += App.template.m_section({
+			// 	icon:
+			// });
 
 			// 我们都爱原创
 			html += App.template.m_section({
 				icon: 'u-icon-heart',
-				title: '/我们都爱原创/',
+				title: '/ 我 们 都 爱 原 创 /',
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [
@@ -87,7 +90,7 @@
 			// 我们都是同人粉
 			html += App.template.m_section({
 				icon:'u-icon-people',
-				title:'/我们都是同人粉/',
+				title:'/ 我 们 都 是 同 人 粉 /',
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [
@@ -106,7 +109,7 @@
 			// 看谁临摹的最好
 			html += App.template.m_section({
 				icon:'u-icon-pencle',
-				title:'/看谁临摹的最好/',
+				title:'/ 看 谁 临 摹 的 最 好 /',
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [

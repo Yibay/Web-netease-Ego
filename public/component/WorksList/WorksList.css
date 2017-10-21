@@ -3,7 +3,7 @@
 .m-workstitle{display:-webkit-flex;display:flex;position:relative;z-index:1;-webkit-justify-content:space-between;justify-content:space-between;-webkit-align-items:center;align-items:center;margin-top:19px;margin-bottom:27px;}
 .m-workstitle .title{font-size:13px;}
 .m-workstitle .u-btn{width:90px;height:38px;background:#5eccb6;font-size:11px;color:#fff;}
-.m-workstitle .u-btn a{display:block;width:100%;height:100%;}
+.m-workstitle .u-btn a{display:block;}
 .m-workstitle img{position:absolute;top:calc(100% + 27px);}
 /* 列表区域 */
 .m-workslist{display:-webkit-flex;display:flex;flex-wrap:wrap;margin-right:-29px;}
@@ -11,7 +11,7 @@
 .m-workslist .item a{display:block;width:103px;height:160px;}
 .m-workslist .item a::before{position:absolute;top:2px;right:2px;bottom:-4px;left:-4px;border:1px solid #d7d7d7;background-color:#c5c6c6;content:"";}
 .m-workslist .item img{position:absolute;top:5px;right:5px;bottom:-7px;left:-7px;width:103px;height:160px;border:1px solid #d7d7d7;border-top:none;border-right:none;box-sizing:border-box;}
-.m-workslist .item h3{position:absolute;bottom:-6px;left:-6px;right:6px;height:30px;line-height:30px;background:rgba(255,255,255,.8);text-align:center;overflow:hidden;text-overflow:ellipsis;font-size:12px;}
+.m-workslist .item h3{position:absolute;bottom:-6px;left:-6px;right:6px;height:30px;line-height:30px;background:rgba(255,255,255,.8);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:12px;}
 /* 编辑与删除图标 */
 .m-workslist .item .icons{display:none;position:absolute;top:5px;right:5px;font-weight:700;text-align:right;color:#fff;}
 .m-workslist .item .icons .u-icon{cursor:pointer;}

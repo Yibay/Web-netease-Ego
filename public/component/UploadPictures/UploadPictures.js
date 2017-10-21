@@ -14,6 +14,7 @@
 						<input class="upload_input" type="file" multiple accept="image/*" />
 					</label>
 					<progress class="f-dn" max="100" value="50"></progress>
+					<span class="progress_msg" ></span>
 				</div>
 				<p class="prompt_box">提示：作品可以包含多张图片，一次选择多张图片，最多不超过10张（单张图片大小小于1M）</p>
 			</div>
@@ -37,6 +38,7 @@
 		this.upload_btn = _.getElementsByClassName(this.container, 'upload_btn')[0]; // 上传图片的按钮
 		this.upload_input = _.getElementsByClassName(this.container, 'upload_input')[0]; // 存图片文件的input
 		this.progress = this.container.getElementsByTagName('progress')[0]; // 上传进度条
+		this.progress_msg = _.getElementsByClassName(this.container, 'progress_msg')[0]; // 进度条文字提示
 		this.pictures_controller = _.getElementsByClassName(this.container, 'pictures_controller')[0]; // 图片列表
 
 		// 图片列表
@@ -135,6 +137,14 @@
 	// 上传文件
 	UploadPictures.prototype._uploadFiles = function(files){
 
+		// 进度条文案参数
+		this.uploadfiles_total = files.length; // 上传文件总数 
+		this.uploadfiles_loaded = 0 // 已上传完成文件数
+		this.uploadfiles_progress = []; // 上传文件 进度数组
+		for(var i=0;i<files.length;i++){
+			this.uploadfiles_progress.push(0); // 各文件 初始值进度 为0
+		}
+
 		// 显示进度条
 		this._showProgress(0, files.length);
 
@@ -142,7 +152,7 @@
 		var uploadRequests = [];
 
 		// 并发各图片上传请求
-		files.forEach(function(item){
+		files.forEach(function(item, index){
 
 			uploadRequests.push(new Promise(function(resolve, reject){
 
@@ -165,7 +175,7 @@
 					}
 				}
 
-				xhr.upload.addEventListener('progress', this.progressHandler.bind(this), false);
+				xhr.upload.addEventListener('progress', this.progressHandler.bind(this, index), false);
 				xhr.open('POST', '/api/works?upload');
 				// 直接send FormData实例
 				xhr.send(fd);
@@ -185,6 +195,8 @@
 			.then(function(data){
 				// 隐藏进度条
 				this._hideProgress();
+				// 清空进度条文案
+				this._updateProgressMsg();
 				// 上传完毕，恢复按钮状态
 				_.delClassName(this.upload_btn, 'f-pen');
 			}.bind(this))
@@ -226,22 +238,41 @@
 		
 	}
 
-	// 3.上传进度提示 功能
-	UploadPictures.prototype.progressHandler = function(evt){
+	// 3.上传进度 回调函数
+	UploadPictures.prototype.progressHandler = function(index, evt){
 		console.log(evt);
-		if(evt.lengthComputable && evt.loaded === evt.total){
-			this._showProgress(++this.progress.value);
+		// 若可计算
+		if(evt && evt.lengthComputable){
+			// 更新 进度数组
+			this.uploadfiles_progress[index] = evt.loaded / evt.total;
+			// 当一个文件上传完毕，上传文件数 ＋ 1
+			if(this.uploadfiles_progress[index] === 1){this.uploadfiles_loaded ++;}
 		}
+		// 并归 进度数组值，传给进度条
+		this._showProgress(this.uploadfiles_progress.reduce(function(prev, cur){return prev + cur;}));
 	};
 	// 显示进度条
 	UploadPictures.prototype._showProgress = function(value, max){
 		this.progress.max = max || this.progress.max || 0;
 		this.progress.value = value;
 		_.delClassName(this.progress, 'f-dn');
+		// 更新进度条文案
+		this._updateProgressMsg(this.progress.value, this.progress.max);
 	};
 	// 隐藏进度条
 	UploadPictures.prototype._hideProgress = function(){
 		_.addClassName(this.progress, 'f-dn');
+	};
+	// 更新进度条 文案
+	UploadPictures.prototype._updateProgressMsg = function(value, max){
+		// 默认 文案为空
+		var progress_msg = '';
+		// 若value 与 max 存在
+		if(typeof value !== 'undefined' && typeof max !== 'undefined'){
+			progress_msg = `共有${this.uploadfiles_total}个文件，已完成${this.uploadfiles_loaded}个文件，上传进度${parseInt(value / max * 100, 10)}%`;
+		}
+		// 更新 进度条 文案
+		this.progress_msg.innerHTML = progress_msg;
 	};
 
 	// 4.设置封面

@@ -8,7 +8,7 @@
 	var template_title = `
 		<div class="m-workstitle">
 			<div class="title">/我发表的作品/</div>
-			<button class="u-btn"><a href="/works/create">上传作品</a></button>
+			<div class="u-btn"><a href="/works/create">上传作品</a></div>
 		</div>`;
 
 	var template_cnt = `<div class="m-workscnt"></div>`;

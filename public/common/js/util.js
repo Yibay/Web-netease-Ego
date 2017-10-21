@@ -6,12 +6,23 @@
 	// 工具函数对象
 	var _ = Object.create(null);
 
-	// 1. 继承属性 (ES6写法)
+	// 1. 继承属性
 	_.extend = function(obj, options){
 		// 若options对象存在
 		if(options && typeof options == 'object'){
-			// obj 继承 options中的属性
-			Object.assign(obj, options);
+			
+			// 若浏览器支持ES6
+		    if(typeof Object.assign !== 'undefined'){
+		    	// obj 继承 options中的属性
+		        return Object.assign(obj, options);
+		    }
+		    // 若浏览器不支持ES6
+		    else{
+		        for(var key in options){
+		            obj[key] = options[key];
+		        }
+		        return obj;
+		    }
 		}
 	};
 	// 8. 判断是否含有该class
