@@ -61,7 +61,8 @@
 /* 侧边栏 热门话题 */
 .m-aside .hottopic_header .title{width:100%;background-color:#5ed0ba;line-height:67px;text-align:center;font-size:11px;color:#fff;}
 .m-aside .hottopic_cnt li{padding:10px 29px;}
-.m-aside .hottopic_cnt li .title{font-size:11px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;}
+.m-aside .hottopic_cnt li .title{position:relative;height:34px;overflow:hidden;font-size:11px;line-height:17px;}
+.m-aside .hottopic_cnt li .title::after{position:absolute;bottom:0;right:0;content:'. . . . .';padding-right:55%;background:#fff;}
 
 /* 侧边栏 圈子 */
 .m-aside .circle_header .title{display:inline-block;width:50%;border-bottom:1px solid #ebebeb;line-height:67px;text-align:center;font-size:11px;cursor:pointer;}
