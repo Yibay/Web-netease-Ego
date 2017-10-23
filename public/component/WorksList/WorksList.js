@@ -201,6 +201,7 @@
 							var name_node = work_target.parentNode.parentNode.getElementsByTagName('h3')[0];
 							// 修改作品名称
 							name_node.innerHTML = new_name;
+							work_target.parentNode.parentNode.dataset.name = new_name; // 同步更新 data- 上属性
 						}.bind(this),
 						fail: function(e){
 							console.log(e);
