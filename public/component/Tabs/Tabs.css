@@ -2,9 +2,12 @@
 /* 选项卡 */
 .m-tabs{float:left;}
 .m-tabs ul{position:relative;/* 设置relative 让li的offsetParent为ul */font-size:11px;}
-.m-tabs ul li{display:inline-block;height:33px;padding:5px 27px 12px;box-sizing:border-box;}
-.m-tabs ul li a{font-size:11px;color:#dcdddd;}
+.m-tabs ul li{display:inline-block;}
+.m-tabs ul li a{display:block;height: 33px;padding: 5px 27px 12px;box-sizing:border-box;font-size:11px;color:#dcdddd;}
 .m-tabs ul li.z-active a{color:#5ed0ba;}
 /* 滑动条 */
 .m-tabs .tabs_track{position:relative;height:4px;border-radius:2px;background:#dcdddd;}
 .m-tabs .tabs_thumb{position:absolute;height:4px;border-radius:2px;background:#5ed0ba;transition:ease 0.1s;}
+
+/* 扩展 */
+.m-tabs-aside ul li a{padding:26px 13px 20px;height:auto;}

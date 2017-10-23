@@ -145,7 +145,6 @@
 
 	// 编辑、删除作品事件
 	WorksList.prototype.clickHandler = function(evt){
-		console.log(evt.target);
 		var target = evt.target;
 		// 若点的是删除按钮
 		if(_.hasClassName(target, 'u-icon-delete')){
@@ -158,7 +157,7 @@
 	};
 	// 删除作品
 	WorksList.prototype.delWork = function(data){
-		console.log(data);
+		
 		// 发布 显示确认弹窗事件
 		this.emit('confirm', {
 			content: `确定要删除作品<span>"${data.name}"</span>吗?`,
@@ -179,7 +178,7 @@
 	};
 	// 编辑作品
 	WorksList.prototype.editWork = function(data, work_target){
-		console.log(data);
+		
 		// 发布 显示确认弹窗事件
 		this.emit('confirm', {
 			title: '请输入新的作品名称',

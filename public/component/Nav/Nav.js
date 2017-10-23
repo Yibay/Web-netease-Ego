@@ -35,7 +35,16 @@ if(!window.App || typeof window.App != 'object'){
 			// 先挂载 容器组件，不然Tabs的滑块offset定位不准确
 			this.parent.appendChild(this.container);
 			// 1.顶栏选项卡 组件
-			this.hdtab = new App.Tabs({parent: this.container, index:this.getTabIndex()});
+			this.hdtab = new App.Tabs({
+				parent: this.container, 
+				index:this.getTabIndex(), 
+				nTabData:[
+					{name:'首页',url:'/index'},
+					{name:'作品',url:'/works'},
+					{name:'圈子',url:'javascript:;'},
+					{name:'奇思妙想',url:'javascript:;'}
+				]
+			});
 			// 2.搜索框 组件
 			this.search = new App.Search({parent: this.container});
 			// 3.未登录显示的客人 组件

@@ -8,7 +8,7 @@
 .m-card .card_info{-webkit-flex:1;flex:1;margin-left:24px;}
 .m-card .card_info div{max-width:155px;font-size:13px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .m-card .card_info div:nth-of-type(1){margin-bottom:16px;}
-.m-card .card_info div span{font-size:8px;font-weight:200;}
+.m-card .card_info div span{font-size:9px;font-weight:200;}
 .m-card .card_info div span + span{margin-left:15px;}
 /* 关注按钮 */
 .m-card .u-btn-sm{display:-webkit-flex;display:flex;width:62px;height:26px;-webkit-justify-content:center;justify-content:center;font-size:11px;line-height:1em;}

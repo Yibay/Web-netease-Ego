@@ -6,7 +6,11 @@
 		// 初始化
 		init: function(){
 			// 编译模板（主内容区）
-			this.compileTemplate();
+			this.compileTemplateMain();
+			// 编译模板（侧边栏）
+			this.compileTemplateAside();
+			// 底栏
+			this.initFooter();
 			// 顶栏
 			this.initNav();
 			// 轮播
@@ -17,10 +21,12 @@
 			this.initRegisterModal();
 			// 登录弹窗
 			this.initLoginModal();
+			// 侧边栏 排行tabs
+			this.initRankingTabs();
 		},
 
-		// 编译模板
-		compileTemplate: function(){
+		// 编译模板（主内容区）
+		compileTemplateMain: function(){
 			var html = '';
 
 			// 构建精选推荐
@@ -66,7 +72,14 @@
 			// 活动进行时
 			html += App.template.m_section({
 				icon: 'u-icon-time',
-				title: '/ 活 动 进 行 时 /'
+				title: '/ 活 动 进 行 时 /',
+				cnt: App.template.list_activity({
+					list_type: 'm-list-1',
+					list: [
+						{img:'/res/images/activity1.png',times:'7.23-8.12',status:'正在进行'},
+						{img:'/res/images/activity2.png',times:'7.23-8.12',status:'正在进行'}
+					]
+				})
 			});
 
 			// 我们都爱原创
@@ -126,9 +139,73 @@
 					]
 				})
 			});
+
 			// 编译结果，载入页面主内容区
 			_.getElementsByClassName(document, 'g-main')[0].innerHTML = html;
 
+		},
+
+		// 编译模板（侧边栏）
+		compileTemplateAside: function(){
+			var html = '';
+
+			html += `<img class="my_work m-aside" src="/res/images/my_work.png" />`;
+
+			// 圈子
+			html += App.template.aside_circle({
+				list: [
+					{img_url: '/res/images/circle1.jpg', circle_name: '门口小贩',circle_members:5221},
+					{img_url: '/res/images/circle2.jpg', circle_name: '原画集中营',circle_members:5221},
+					{img_url: '/res/images/circle3.jpg', circle_name: '—— Horizon ——',circle_members:5221}
+				]
+			});
+
+			// 热门话题
+			html += App.template.aside_hottopic({
+				list: [
+					{title: '1. [萝莉学院] 你不知道的那些事 这是标题标题 这是标题标题 这是标题标题 这是标题标题'},
+					{title: '1. [萝莉学院] 你不知道的那些事 这是标题标题 这是标题标题 这是标题标题 这是标题标题'},
+					{title: '1. [萝莉学院] 你不知道的那些事 这是标题标题 这是标题标题 这是标题标题 这是标题标题'},
+					{title: '1. [萝莉学院] 你不知道的那些事 这是标题标题 这是标题标题 这是标题标题 这是标题标题'},
+					{title: '1. [萝莉学院] 你不知道的那些事 这是标题标题 这是标题标题 这是标题标题 这是标题标题'}
+				]
+			});
+
+			// 排行
+			html += App.template.aside_ranking({
+				list: [
+					{img_url: '/res/images/work5.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '/res/images/work6.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '/res/images/work8.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '/res/images/work9.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '/res/images/work10.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421}
+				]
+			});
+
+			// 达人排行
+			html += App.template.aside_authorranking({
+				list: [
+					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421}
+				]
+			});
+
+			// 编译结果，载入页面主内容区
+			_.getElementsByClassName(document, 'g-side')[0].innerHTML = html;
+		},
+
+		initFooter: function(){
+			var html = `<div class="footer_main">
+				<div class="u-btn u-btn-primary">/ 友 情 链 接 /</div>
+			</div>
+			<div class="footer_aside">
+				<div class="u-btn u-btn-link">/ 关 于 我 们 /</div>
+			</div>`;
+
+			_.getElementsByClassName(document, 'g-footer')[0].innerHTML = html;
 		},
 
 		// 初始化顶栏
@@ -163,6 +240,18 @@
 		initLoginModal: function(){
 			// 登录弹窗
 			new App.LoginModal({parent: document.body});
+		},
+		initRankingTabs: function(){
+			// 侧边栏 排行tabs
+			new App.Tabs({
+				parent: document.getElementById('ranking_tabs'),
+				nTabData: [
+					{name:'原 创',url:'javascript:;'},
+					{name:'同 人',url:'javascript:;'},
+					{name:'临 摹',url:'javascript:;'}
+				],
+				list_type: 'm-tabs-aside'
+			});
 		}
 	}
 

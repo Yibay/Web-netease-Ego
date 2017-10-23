@@ -21,3 +21,65 @@
 .g-main{width:760px;float:left;}
 .g-side{width:295px;float:right;}
 .g-footer{width:1080px;margin:0 auto;}
+
+
+/* 活动进行时 参与模块*/
+.m-list .activity_ongonging{padding-left:22px;padding-top:0;}
+.m-list .involve_activity{margin:40px 38px 0 20px;}
+.m-list .involve_activity .u-btn{display:block;width:72px;height:auto;padding:7px 0;margin:12px 0;font-size:11px;line-height:1em;}
+
+/* 侧边栏 */
+.m-aside{margin-bottom:29px;background:#fff;}
+.m-aside > ul{padding-left:12px;padding-right:10px;}
+.m-aside > ul li{border-top:1px solid #e5e6e6;}
+.m-aside > ul li:nth-of-type(1){border:none;}
+.m-aside .aside_more{display:-webkit-flex;display:flex;padding-bottom:10px;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;align-items:center;font-size:13px;color:#727171;cursor:pointer;}
+.m-aside .aside_more .u-icon-moreright{margin-left:6px;}
+.m-aside .u-icon{font-size:32px;color:#5ecbb5;}
+
+/* 侧边栏 排行 */
+.m-aside .ranking_header .title{width:100px;height:67px;margin-right:10px;background-color:#5ed0ba;line-height:67px;text-align:center;font-size:11px;color:#fff;}
+.m-aside .ranking_cnt{position:relative;margin-top:8px;padding-top:16px;}
+.m-aside .ranking_cnt li{padding-top:16px;padding-left:5px;border-color:#e5e6e6;}
+.m-aside .ranking_cnt li img{width:136px;height:113px;margin-right:13px;margin-bottom:15px;}
+.m-aside .ranking_cnt li h6{margin-top:20px;margin-bottom:11px;line-height:1em;font-size:12px;}
+.m-aside .ranking_cnt li p{margin-top:0;margin-bottom:28px;font-size:12px;color:#727171;}
+.m-aside .ranking_cnt li p + p{margin-bottom:24px;font-size:9px;}
+.m-aside .ranking_cnt li p span{margin-right:10px;}
+.m-aside .ranking_cnt .u-icon-morebottom{position:absolute;bottom:-20px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);font-size:32px;color: #5ecbb5;}
+
+/* 侧边栏 达人排行榜 */
+.m-aside .authorranking_header .title{width:100%;background-color:#5ed0ba;line-height:67px;text-align:center;font-size:11px;color:#fff;}
+.m-aside .authorranking_cnt{position:relative;padding-bottom:26px;}
+.m-aside .authorranking_cnt li{padding-top:29px;padding-left:30px;border-color:#e7e8e8;}
+.m-aside .authorranking_cnt li img{width:69px;height:69px;margin-right:23px;margin-bottom:30px;-webkit-border-radius:50%;border-radius:50%;}
+.m-aside .authorranking_cnt li h6{margin-top:16px;margin-bottom:15px;line-height:1em;font-size:10px;}
+.m-aside .authorranking_cnt li p{margin-top:0;margin-bottom:28px;font-size:9px;color:#727171;}
+.m-aside .authorranking_cnt li p span{margin-right:15px;}
+.m-aside .authorranking_cnt .u-icon-morebottom{position:absolute;bottom:-20px;left:50%;-webkit-transform:translateX(-50%);transform:translateX(-50%);font-size:32px;color: #5ecbb5;}
+
+/* 侧边栏 热门话题 */
+.m-aside .hottopic_header .title{width:100%;background-color:#5ed0ba;line-height:67px;text-align:center;font-size:11px;color:#fff;}
+.m-aside .hottopic_cnt li{padding:10px 29px;}
+.m-aside .hottopic_cnt li .title{font-size:11px;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;}
+
+/* 侧边栏 圈子 */
+.m-aside .circle_header .title{display:inline-block;width:50%;border-bottom:1px solid #ebebeb;line-height:67px;text-align:center;font-size:11px;cursor:pointer;}
+.m-aside .circle_header .title :checked ~ div{border-bottom:1px solid #5ed0ba;background-color:#5ed0ba;color:#fff;}
+.m-aside .circle_cnt li{border:none;}
+.m-aside .circle_cnt li img{width:87px;height:87px;margin-right:14px;margin-top:11px;}
+.m-aside .circle_cnt li .f-oh{padding-left:35px;border-top:1px solid #e5e6e6;}
+.m-aside .circle_cnt li:nth-of-type(1) .f-oh{border:none;}
+.m-aside .circle_cnt li h6{margin-top:33px;margin-bottom:14px;font-size:12px;line-height:1em;}
+.m-aside .circle_cnt li p{margin-bottom:30px;font-size:8px;line-height:1em;}
+
+/* 侧边栏 我的作品 */
+.my_work{display:block;margin-left:-17px;margin-top:-19px;width:313px;background:rgba(0,0,0,0);}
+
+
+/* 底栏 */
+.g-footer{margin-bottom:96px;}
+.g-footer .footer_main{float:left;width:760px;}
+.g-footer .footer_aside{float:right;width:295px;}
+.g-footer .u-btn{height:84px;line-height:84px;font-size:13px;}
+.g-footer .u-btn-link{border-color:#e7e7e7;color:#000;}

@@ -7,22 +7,28 @@ if(!window.App || typeof window.App != 'object'){
 (function(App){
 
 	// 模板
-	var template = `<div class="m-tabs" id="hdtabs">
+	var _template = Handlebars.compile(`<div class="m-tabs {{list_type}}" id="hdtabs">
 		<ul>
-			<li><a href="/index">首页</a></li>
-			<li><a href="/works">作品</a></li>
-			<li><a href="javascript:;">圈子</a></li>
-			<li><a href="javascript:;">奇思妙想</a></li>
+			{{#each nTabData}}
+				<li><a href="{{url}}">{{name}}</a></li>
+			{{/each}}
 		</ul>
 		<div class="tabs_track">
-			<div class="tabs_thumb" style="width: 68px;left: 0px;"></div>
+			<div class="tabs_thumb"></div>
 		</div>
-	</div>`;
+	</div>`);
 
 	/** options 参数说明
 	* {
 	*   parent: dom节点, 父容器 (必填)
 	*   index: num类型，Tab选中项的序号 
+	*   nTabData: [     选项卡数据 (必填)
+	*     {
+	*       name: str, tab名称
+	*       url: str,  url地址   
+	*     }
+	*   ],
+	*   list_type: str,  Tab的扩展样式
 	* }
 	*/
 	function Tabs(options){
@@ -32,7 +38,7 @@ if(!window.App || typeof window.App != 'object'){
 		this.index = this.index || 0;
 		// 缓存节点
 			// 容器
-		this.container = this._template.cloneNode(true);
+		this.container = _.html2node(_template(this));
 			// Tab
 		this.nTab = this.container.getElementsByTagName('ul')[0];
 		this.nTabs = this.nTab.children;
@@ -42,9 +48,6 @@ if(!window.App || typeof window.App != 'object'){
 		// 初始化
 		this.init();
 	}
-
-	// 用于复用的dom节点
-	Tabs.prototype._template = _.html2node(template);
 
 	// 初始化(绑定事件, 将组件载入页面)
 	Tabs.prototype.init = function(){
