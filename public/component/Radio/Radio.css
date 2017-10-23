@@ -1,5 +1,5 @@
 /* 单选框组件 */
-.m-radio li label{margin-top:0;margin-bottom:21px;font-size:11px;line-height:16px;color:#848383;cursor:pointer;}
+.m-radio li label{margin-top:0;margin-bottom:21px;font-size:11px;line-height:16px;white-space:nowrap;color:#848383;cursor:pointer;}
 /* 隐藏单选按钮 */
 .m-radio li input[type=radio]{display:none;}
 /* 自定义单选按钮样式 */

@@ -111,11 +111,22 @@
 		// 点击选择器外部，触发关闭选择器事件
 		document.addEventListener('click', function(evt){
 			// 若是从选择器组件 冒泡出来的，则直接退出
-			for(var i=0;i<evt.path.length;i++){
-				if(evt.path[i] === this.body){
+			try{
+				// 若浏览器 支持 event.path属性，用此写法
+				for(var i=0;i<evt.path.length;i++){
+					if(evt.path[i] === this.body){
+						return;
+					}
+				};
+			}
+			catch(e){
+				// 打印异常
+				console.log(e);
+				// 若浏览器 不支持 event.path属性，则用此写法
+				if(evt.target.parentNode === this.body || evt.target.parentNode.parentNode === this.body){
 					return;
 				}
-			};
+			}
 			// 否则，关闭选择器下拉列表
 			this.close();
 		}.bind(this));

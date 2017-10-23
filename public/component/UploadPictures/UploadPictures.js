@@ -70,7 +70,7 @@
 		this.pictures_controller.addEventListener('click', this.removeImg.bind(this));
 
 		// 挂载组件
-		this.parent.append(this.container);
+		this.parent.appendChild(this.container);
 	};
 
 	// 1.通过按钮 上传文件
@@ -181,12 +181,14 @@
 				xhr.send(fd);
 
 			}.bind(this))
-			.then(res => {
+			.then(function(res){
 				// 添加图片
 				this._addImg(res);
 				return res;
+			}.bind(this))
+			.catch(function(e){
+				return e;
 			})
-			.catch(e => e)
 			);
 		}.bind(this));
 
