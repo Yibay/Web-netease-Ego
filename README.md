@@ -14,6 +14,6 @@
 <h3>页面地址</h3>
 <ul>
 	<li>项目首页：<a href="http://localhost:8002/index">http://localhost:8002/index</a></li>
-	<li>作品列表页：<a href="http://localhost:8002/works">>http://localhost:8002/works</a></li>
-	<li>作品创建页：<a href="http://localhost:8002/works/create">>http://localhost:8002/works/create</a></li>
+	<li>作品列表页：<a href="http://localhost:8002/works">http://localhost:8002/works</a></li>
+	<li>作品创建页：<a href="http://localhost:8002/works/create">http://localhost:8002/works/create</a></li>
 </ul>
