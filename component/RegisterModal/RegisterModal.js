@@ -8,7 +8,7 @@
 	// 模板
 	var template = `<div class="m-registermodal">
 		<span class="close_btn u-icon u-icon-close"></span>
-		<div><img class="logo" src="../res/images/logo.png" /></div>
+		<div><img class="logo" src="${base_url}/res/images/logo.png" /></div>
 		<form class="m-form" id="registerform">
 			<div class="u-formitem">
 				<label for="phone" class="formitem_tt">手机号</label>
