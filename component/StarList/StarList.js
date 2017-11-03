@@ -35,7 +35,7 @@
 	// 获取明日之星数据
 	StarList.prototype.getstarlist = function(){
 		_.ajax({
-			url: '/api/users?getstarlist',
+			url: api_url + '/api/users?getstarlist',
 			method: 'GET',
 			success: function(data){
 				data = JSON.parse(data);
