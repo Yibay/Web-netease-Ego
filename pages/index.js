@@ -1,6 +1,8 @@
 // 首页
 (function(App){
 
+	var base_url = 'Web-netease-Ego';
+
 	var page = {
 
 		// 初始化
@@ -36,10 +38,10 @@
 				cnt: App.template.list_img({
 					list_type: 'm-list-4',
 					list: [
-						{img:'/res/images/work1.jpg',img_alt:'作品1'},
-						{img:'/res/images/work2.jpg',img_alt:'作品2'},
-						{img:'/res/images/work3.jpg',img_alt:'作品3'},
-						{img:'/res/images/work4.jpg',img_alt:'作品4'}
+						{img:'${base_url}/res/images/work1.jpg',img_alt:'作品1'},
+						{img:'${base_url}/res/images/work2.jpg',img_alt:'作品2'},
+						{img:'${base_url}/res/images/work3.jpg',img_alt:'作品3'},
+						{img:'${base_url}/res/images/work4.jpg',img_alt:'作品4'}
 					]
 				})
 			});
@@ -56,16 +58,16 @@
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [
-						{img:'/res/images/work5.jpg',img_alt:'作品1',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品7',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品8',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品10',img_name:'我是作品名字'}
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品1',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品7',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品8',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品10',img_name:'我是作品名字'}
 					]
 				})
 			});
@@ -76,8 +78,8 @@
 				cnt: App.template.list_activity({
 					list_type: 'm-list-1',
 					list: [
-						{img:'/res/images/activity1.png',times:'7.23-8.12',status:'正在进行'},
-						{img:'/res/images/activity2.png',times:'7.23-8.12',status:'正在进行'}
+						{img:'${base_url}/res/images/activity1.png',times:'7.23-8.12',status:'正在进行'},
+						{img:'${base_url}/res/images/activity2.png',times:'7.23-8.12',status:'正在进行'}
 					]
 				})
 			});
@@ -89,15 +91,15 @@
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [
-						{img:'/res/images/work7.jpg',img_alt:'作品1',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品7',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品8',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work7.jpg',img_alt:'作品1',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品7',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品8',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'},
 					]
 				})
 			});
@@ -108,15 +110,15 @@
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [
-						{img:'/res/images/work7.jpg',img_alt:'作品1',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品7',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品8',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'}
+						{img:'${base_url}/res/images/work7.jpg',img_alt:'作品1',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品7',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品8',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'}
 					]
 				})
 			});
@@ -127,15 +129,15 @@
 				cnt: App.template.list_img({
 					list_type: 'm-list-5',
 					list: [
-						{img:'/res/images/work7.jpg',img_alt:'作品1',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
-						{img:'/res/images/work6.jpg',img_alt:'作品7',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品8',img_name:'我是作品名字'},
-						{img:'/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'}
+						{img:'${base_url}/res/images/work7.jpg',img_alt:'作品1',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品2',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品3',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品4',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品5',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品6',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work6.jpg',img_alt:'作品7',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品8',img_name:'我是作品名字'},
+						{img:'${base_url}/res/images/work5.jpg',img_alt:'作品9',img_name:'我是作品名字'}
 					]
 				})
 			});
@@ -154,9 +156,9 @@
 			// 圈子
 			html += App.template.aside_circle({
 				list: [
-					{img_url: '/res/images/circle1.jpg', circle_name: '门口小贩',circle_members:5221},
-					{img_url: '/res/images/circle2.jpg', circle_name: '原画集中营',circle_members:5221},
-					{img_url: '/res/images/circle3.jpg', circle_name: '—— Horizon ——',circle_members:5221}
+					{img_url: '${base_url}/res/images/circle1.jpg', circle_name: '门口小贩',circle_members:5221},
+					{img_url: '${base_url}/res/images/circle2.jpg', circle_name: '原画集中营',circle_members:5221},
+					{img_url: '${base_url}/res/images/circle3.jpg', circle_name: '—— Horizon ——',circle_members:5221}
 				]
 			});
 
@@ -174,22 +176,22 @@
 			// 排行
 			html += App.template.aside_ranking({
 				list: [
-					{img_url: '/res/images/work5.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
-					{img_url: '/res/images/work6.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
-					{img_url: '/res/images/work8.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
-					{img_url: '/res/images/work9.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
-					{img_url: '/res/images/work10.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421}
+					{img_url: '${base_url}/res/images/work5.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '${base_url}/res/images/work6.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '${base_url}/res/images/work8.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '${base_url}/res/images/work9.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421},
+					{img_url: '${base_url}/res/images/work10.jpg',work_name: '我是作品名称',author_name: '用户名',visit_num: 2348,collection_num: 421}
 				]
 			});
 
 			// 达人排行
 			html += App.template.aside_authorranking({
 				list: [
-					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
-					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
-					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
-					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
-					{img_url: '/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421}
+					{img_url: '${base_url}/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '${base_url}/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '${base_url}/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '${base_url}/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421},
+					{img_url: '${base_url}/res/images/avatar0.jpg',author_name: 'Grinch',works_num: 2348,fans_num: 421}
 				]
 			});
 
@@ -219,10 +221,10 @@
 			new App.Slider({
 				parent: _.getElementsByClassName(document, 'g-banner')[0],
 				imgArray: [
-					'../res/images/Slider/banner0.jpg',
-					'../res/images/Slider/banner1.jpg',
-					'../res/images/Slider/banner2.jpg',
-					'../res/images/Slider/banner3.jpg'
+					'${base_url}/res/images/Slider/banner0.jpg',
+					'${base_url}/res/images/Slider/banner1.jpg',
+					'${base_url}/res/images/Slider/banner2.jpg',
+					'${base_url}/res/images/Slider/banner3.jpg'
 				],
 				interval: 5000
 			});	
