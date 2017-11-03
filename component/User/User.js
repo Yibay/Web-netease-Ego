@@ -7,7 +7,7 @@ if(!window.App || typeof window.App != 'object'){
 	// 模板
 	var template = `<div class="m-user f-dn" id=userdropdown>
 		<div class="user_info">
-			<span class="user_avatar"><img src="/res/images/avatar.png" alt="" /></span>
+			<span class="user_avatar"><img src="${base_url}/res/images/avatar.png" alt="" /></span>
 			<span class="user_basicinfo">
 				<span class="user_name" id="name"></span>
 				<span class="u-icon sex_icon"></span>
