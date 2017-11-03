@@ -60,7 +60,7 @@ if(!window.App || typeof window.App != 'object'){
 	// 退出登录
 	User.prototype.logout = function(){
 		_.ajax({
-			url: '/api/logout',
+			url: api_url + '/api/logout',
 			method: 'POST',
 			data: {},
 			success: function(data){

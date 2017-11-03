@@ -71,7 +71,7 @@
 		var config = followConfig[Number(!!data.isFollow)];
 		var html = `
 			<li class="m-card">
-				<img src="/res/images/avatar${index}.jpg" alt="" class="card_avatar" />
+				<img src="${base_url}/res/images/avatar${index}.jpg" alt="" class="card_avatar" />
 				<div class="card_info">
 					<div>${data.nickname}</div>
 					<div><span>作品 ${data.workCount}</span><span>粉丝 ${data.followCount}</span></div>
@@ -120,7 +120,7 @@
 	// 关注
 	StarList.prototype.follow = function(followInfo, replaceNode){
 		_.ajax({
-			url: '/api/users?follow',
+			url: api_url + '/api/users?follow',
 			method: 'POST',
 			data: {id: followInfo.id},
 			header: {'content-type': 'application/json'},
@@ -142,7 +142,7 @@
 	// 取消关注
 	StarList.prototype.unFollow = function(followInfo, replaceNode){
 		_.ajax({
-			url: '/api/users?unfollow',
+			url: api_url + '/api/users?unfollow',
 			method: 'POST',
 			data: {id: followInfo.id},
 			header: {'content-type': 'application/json'},
