@@ -7,7 +7,7 @@ if(!window.App || typeof window.App != 'object'){
 
 	// 模板
 	var template = `<div class="m-nav f-cb">
-		<img class="logo" src="../res/images/logo.png" alt="" />
+		<img class="logo" src="${base_url}/res/images/logo.png" alt="" />
 	</div>`;
 
 	// options 参数说明

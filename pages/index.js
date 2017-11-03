@@ -1,8 +1,6 @@
 // 首页
 (function(App){
 
-	var base_url = '/Web-netease-Ego';
-
 	var page = {
 
 		// 初始化
@@ -151,7 +149,7 @@
 		compileTemplateAside: function(){
 			var html = '';
 
-			html += `<img class="my_work m-aside" src="/res/images/my_work.png" />`;
+			html += `<img class="my_work m-aside" src="${base_url}/res/images/my_work.png" />`;
 
 			// 圈子
 			html += App.template.aside_circle({
