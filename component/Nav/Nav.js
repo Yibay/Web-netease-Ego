@@ -7,7 +7,7 @@ if(!window.App || typeof window.App != 'object'){
 
 	// 模板
 	var template = `<div class="m-nav f-cb">
-		<img class="logo" src="${base_url}/res/images/logo.png" alt="" />
+		<img class="logo" src="../res/images/logo.png" alt="" />
 	</div>`;
 
 	// options 参数说明
@@ -39,8 +39,8 @@ if(!window.App || typeof window.App != 'object'){
 				parent: this.container, 
 				index:this.getTabIndex(), 
 				nTabData:[
-					{name:'首页',url:''},
-					{name:'作品',url:base_url + '/works/list.html'},
+					{name:'首页',url:'/index'},
+					{name:'作品',url:'/works'},
 					{name:'圈子',url:'javascript:;'},
 					{name:'奇思妙想',url:'javascript:;'}
 				]
@@ -58,7 +58,7 @@ if(!window.App || typeof window.App != 'object'){
 	//  初始化登录状态
 	Nav.prototype.initLoginStatus = function(){
 		_.ajax({
-			url: api_url + '/api/users?getloginuser',
+			url: '/api/users?getloginuser',
 			method: 'GET',
 			success: (function(data){
 				data = JSON.parse(data);
@@ -74,23 +74,22 @@ if(!window.App || typeof window.App != 'object'){
 				}
 			}).bind(this),
 			fail: function(){
-				console.log(api_url + 'api/users?getloginuser 失败');
+				console.log('api/users?getloginuser 失败');
 			}
 		})
 	};
 	//  获取 tab的选中项的序号
 	Nav.prototype.getTabIndex = function(){
 		// 根据url 的path，决定 tab的index
-		switch (location.pathname.match(/\/([^\/]+)/g)[2]){
-			// 首页
-			case 'index':
-				return 0;
-			// 作品页
-			case 'works':
-				return 1;
-			// 默认首页
-			default :
-				return 0;
+		if(/\/([^\/]+)/.test(location.pathname)){
+			switch (RegExp.$1){
+				// 首页
+				case 'index':
+					return 0;
+				// 作品页
+				case 'works':
+					return 1;
+			}
 		}
 	};
 
