@@ -39,7 +39,7 @@ if(!window.App || typeof window.App != 'object'){
 				parent: this.container, 
 				index:this.getTabIndex(), 
 				nTabData:[
-					{name:'首页',url:'/index'},
+					{name:'首页',url:base_url},
 					{name:'作品',url:base_url + '/html/works/list.html'},
 					{name:'圈子',url:'javascript:;'},
 					{name:'奇思妙想',url:'javascript:;'}
