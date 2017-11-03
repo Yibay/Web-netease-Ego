@@ -83,7 +83,7 @@ if(!window.App || typeof window.App != 'object'){
 		// 根据url 的path，决定 tab的index
 		switch(location.pathname.match(/\/([^\/]+)/g)[2]){
 			// 作品页
-			case 'works':
+			case '/works':
 				return 1;
 			// 首页（默认）
 			default:
