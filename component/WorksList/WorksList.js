@@ -8,7 +8,7 @@
 	var template_title = `
 		<div class="m-workstitle">
 			<div class="title">/我发表的作品/</div>
-			<div class="u-btn"><a href="/works/create">上传作品</a></div>
+			<div class="u-btn"><a href="${base_url}/html/works/create.html">上传作品</a></div>
 		</div>`;
 
 	var template_cnt = `<div class="m-workscnt"></div>`;
@@ -56,7 +56,7 @@
 		this.title = _.html2node(template_title);
 		this.parent.appendChild(this.title);
 		// 添加Loading图标
-		this.loading = _.html2node(`<img class="f-dn" src="../../res/images/loading.gif" />`);
+		this.loading = _.html2node(`<img class="f-dn" src="${base_url}/res/images/loading.gif" />`);
 		this.title.appendChild(this.loading);
 		// 渲染作品内容
 		this.cnt = _.html2node(template_cnt);
