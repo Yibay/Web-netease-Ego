@@ -1,7 +1,7 @@
 // 首页
 (function(App){
 
-	var base_url = 'Web-netease-Ego';
+	var base_url = '/Web-netease-Ego';
 
 	var page = {
 
