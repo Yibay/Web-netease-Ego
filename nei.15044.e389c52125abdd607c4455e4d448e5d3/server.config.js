@@ -79,9 +79,9 @@ module.exports = {
     /* 项目的 key */
     projectKey: 'e389c52125abdd607c4455e4d448e5d3',
     /* 同步模块mock数据路径 */
-    mockTpl: '/Users/zhouquan/workspace/nodeProgram/网易Mini/mock.data/template/',
+    mockTpl: __dirname + '/../mock.data/template/',
     /* 异步接口mock数据路径 */
-    mockApi: '/Users/zhouquan/workspace/nodeProgram/网易Mini/mock.data/interface/',
+    mockApi: __dirname + '/../mock.data/interface/',
     /* 模板后缀 */
     viewExt: '.html',
     /* 模板引擎 */
