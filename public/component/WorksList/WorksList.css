@@ -13,7 +13,7 @@
 .m-workslist .item img{position:absolute;top:5px;right:5px;bottom:-7px;left:-7px;width:103px;height:160px;border:1px solid #d7d7d7;border-top:none;border-right:none;box-sizing:border-box;}
 .m-workslist .item h3{position:absolute;bottom:-6px;left:-6px;right:6px;height:30px;line-height:30px;background:rgba(255,255,255,.8);text-align:center;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;font-size:12px;}
 /* 编辑与删除图标 */
-.m-workslist .item .icons{display:none;position:absolute;top:5px;right:5px;font-weight:700;text-align:right;color:#fff;}
+.m-workslist .item .icons{display:none;position:absolute;top:5px;right:5px;bottom:-7px;left:-7px;background:rgba(0,0,0,0.5);font-weight:700;text-align:right;color:#fff;}
 .m-workslist .item .icons .u-icon{cursor:pointer;}
 .m-workslist .item .icons .u-icon:last-child{margin-right:4px;}
 .m-workslist .item:hover .icons{display:block;}
