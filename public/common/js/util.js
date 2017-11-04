@@ -202,6 +202,7 @@
 	};
 	// 11. 计算年龄
 	_.calculateAge = function(birthday){
+		birthday = birthday.replace(/-/g,'/'); // Safari Date 不识别 1990-1-1，只识别 1990/1/1
 		return parseInt((new Date().getTime() - new Date(birthday).getTime()) / 1000 / 3600 / 24 / 365, 10);
 	};
 	// 12. 查找城市名

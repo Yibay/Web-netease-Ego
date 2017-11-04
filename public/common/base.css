@@ -1,7 +1,7 @@
 /* 字体图标 */
 @import url(./font/iconfont.css);
 /* Reset */
-html,body,ul,h3,h4{margin:0;padding:0;}
+html,body,ul,h3,h4{margin:0;padding:0;font:12px "Microsoft YaHei", "Helvetica", "sans-serif";}
 body{background:#efefef;}
 ul{list-style:none;}
 a{text-decoration:none;color:inherit;}
