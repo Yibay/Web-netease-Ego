@@ -4,11 +4,12 @@
  * Auto build by NEI Builder
  */
 var path = require('path');
+console.log(__dirname);
 module.exports = {
     /* 根目录 */
-    webRoot: '/Users/zhouquan/workspace/nodeProgram/网易Mini/public/',
+    webRoot: __dirname + '/../public/',
     /* 视图目录 */
-    viewRoot: '/Users/zhouquan/workspace/nodeProgram/网易Mini/public/html/',
+    viewRoot: __dirname + '/../public/html/',
     /* 路由 */
     routes: {
       "ALL /api/*": "http://59.111.99.234/",
