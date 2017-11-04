@@ -4,7 +4,7 @@
  * Auto build by NEI Builder
  */
 var path = require('path');
-console.log(__dirname);
+
 module.exports = {
     /* 根目录 */
     webRoot: __dirname + '/../public/',
