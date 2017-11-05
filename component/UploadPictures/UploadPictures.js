@@ -85,6 +85,8 @@
 		// 从drop事件中，获取files
 		// 检验规格 (不合格，则不上传)
 		this._checkFiles(files);
+		// 清空input file中列表中缓存内容
+ 		this.upload_input.value = null;
 	};
 	// 检验文件规格
 	UploadPictures.prototype._checkFiles = function(files){

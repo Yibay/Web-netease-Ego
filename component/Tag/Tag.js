@@ -119,7 +119,7 @@
 		// 若已添加过此标签
 		if(this.list.indexOf(evt.target.innerText) !== -1){
 			// 从选中list中移除
-			this.list.splice(this.list.indexOf(evt.target),1);
+			this.list.splice(this.list.indexOf(evt.target.innerText),1);
 			// 从视图中移除
 			evt.target.parentNode.removeChild(evt.target);
 		}
