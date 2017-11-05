@@ -57,7 +57,7 @@
 				<label for="" class="formitem_tt">验证码</label>
 				<div class="formitem_ct formitem_ct-validate">
 					<input type="text" id="captcha" class="u-ipt" />
-					<img id="captchaimg" src="/captcha" alt="" />
+					<img id="captchaimg" src="` + _.createUrl('/captcha') + `" alt="" />
 				</div>
 			</div>
 			<div class="terms">

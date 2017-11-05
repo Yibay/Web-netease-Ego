@@ -35,7 +35,7 @@
 	// 获取明日之星数据
 	StarList.prototype.getstarlist = function(){
 		_.ajax({
-			url: '/api/users?getstarlist',
+			url: _.createUrl('/api/users?getstarlist', 'GET'),
 			method: 'GET',
 			success: function(data){
 				data = JSON.parse(data);
@@ -120,7 +120,7 @@
 	// 关注
 	StarList.prototype.follow = function(followInfo, replaceNode){
 		_.ajax({
-			url: '/api/users?follow',
+			url: _.createUrl('/api/users?follow', 'POST'),
 			method: 'POST',
 			data: {id: followInfo.id},
 			header: {'content-type': 'application/json'},
@@ -142,7 +142,7 @@
 	// 取消关注
 	StarList.prototype.unFollow = function(followInfo, replaceNode){
 		_.ajax({
-			url: '/api/users?unfollow',
+			url: _.createUrl('/api/users?unfollow', 'POST'),
 			method: 'POST',
 			data: {id: followInfo.id},
 			header: {'content-type': 'application/json'},

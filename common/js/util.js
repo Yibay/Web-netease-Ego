@@ -240,13 +240,14 @@
 	// 14. 处理url
 	_.createUrl = function(url, method){
 		var full_url = '';
+		method ? method : 'GET';
 		// 若接口为线上地址
 		if(api_url.indexOf('/Web-netease-Ego') === -1){
 			full_url = api_url + url;
 		}
 		// 若接口为本地模拟数据
 		else{
-			full_url = api_url + '/' + method.toLowerCase() + url.replace(/\?/g,'/params/') + '/data.json';
+			full_url = api_url + '/' + method.toLowerCase() + url.replace(/\?/g,'/params/') + '/data.json'; // url 不识别 _ ，用 params 替换掉，所以文件夹不能用 _ 命名
 		}
 		return full_url;
 	};
