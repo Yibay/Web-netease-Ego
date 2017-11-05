@@ -247,7 +247,7 @@
 		}
 		// 若接口为本地模拟数据
 		else{
-			full_url = api_url + '/' + method.toLowerCase() + url.replace(/\?/g,'/params/') + '/data.json'; // url 不识别 _ ，用 params 替换掉，所以文件夹不能用 _ 命名
+			full_url = api_url + '/' + method.toLowerCase() + url.replace(/\?/g,'/params/') + '/data.json?t=' + _.parseDate(); // url 不识别 _ ，用 params 替换掉，所以文件夹不能用 _ 命名
 		}
 		return full_url;
 	};
@@ -258,6 +258,19 @@
 			method = 'GET';
 		}
 		return method;
+	};
+	// 16. 格式化 日期 如 yyyy-mm-dd 形式
+	// 试试replace ＋ 正则的方法
+	_.parseDate = function(date){
+		(data && date instanceof Date) || (date = new Date()); // 非Date类型，取当前值
+		var rule = 'yyyymmddhhnnss';
+		return rule.replace(/yyyy/,date.getFullYear()).replace(/mm/,_.format2dights(date.getMonth() + 1)).replace(/dd/,_.format2dights(date.getDate()))
+					.replace(/hh/,date.getHours()).replace(/nn/,date.getMinutes()).replace(/ss/,date.getSeconds());
+	};
+	// 17. 格式化 2位数
+	_.format2dights = function(num){
+		if(num < 10 && num >=0){num = '0' + num;}
+		return num + '';
 	};
 
 	// 把工具函数对象 绑定到 全局变量上。

@@ -67,7 +67,7 @@ if(!window.App || typeof window.App != 'object'){
 				data = JSON.parse(data);
 				console.log(data);
 				if(data.code === 200){
-					window.location.href = "/index";
+					window.location.href = base_url + "/index";
 				}
 			},
 			fail: function(){}
