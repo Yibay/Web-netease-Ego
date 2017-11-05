@@ -316,6 +316,7 @@
 				if(this.picture_list[i].id == id){
 					// 则从列表中删除该图片
 					this.picture_list.splice(i,1);
+					break; // 模拟数据中id 为同一个，批量删除，则会把所有picture数据全部清空。所以改为只删除1个
 				}
 			}
 		}

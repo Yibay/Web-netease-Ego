@@ -138,7 +138,7 @@
 					// 上传成功
 					if(res.code === 200){
 						// 跳转回列表页
-						location.assign(`${base_url}/works`);
+						location.assign(`${base_url}/html/works/list.html`);
 					}
 				},
 				fail: function(e){
