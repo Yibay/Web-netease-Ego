@@ -123,8 +123,8 @@
 				remember: !!this.nRemember.checked
 			};
 			_.ajax({
-				url: '/api/login',
-				method: 'POST',
+				url: _.createUrl('/api/login','POST'),
+				method: _.fixMethod('POST'),
 				header: {
 					'content-type': 'application/json'
 				},

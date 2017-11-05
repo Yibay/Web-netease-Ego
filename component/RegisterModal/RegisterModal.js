@@ -235,8 +235,8 @@
 			data.birthday = this.birthday;
 			// 发送请求
 			_.ajax({
-				url:'/api/register',
-				method:'POST',
+				url: _.createUrl('/api/register', 'POST'),
+				method: _.fixMethod('POST'),
 				header: {
 					'content-type': 'application/json'
 				},

@@ -36,7 +36,7 @@
 	StarList.prototype.getstarlist = function(){
 		_.ajax({
 			url: _.createUrl('/api/users?getstarlist', 'GET'),
-			method: 'GET',
+			method: _.fixMethod('GET'),
 			success: function(data){
 				data = JSON.parse(data);
 				if(data.code === 200){
@@ -71,7 +71,7 @@
 		var config = followConfig[Number(!!data.isFollow)];
 		var html = `
 			<li class="m-card">
-				<img src="/res/images/avatar${index}.jpg" alt="" class="card_avatar" />
+				<img src="${base_url}/res/images/avatar${index}.jpg" alt="" class="card_avatar" />
 				<div class="card_info">
 					<div>${data.nickname}</div>
 					<div><span>作品 ${data.workCount}</span><span>粉丝 ${data.followCount}</span></div>
@@ -121,7 +121,7 @@
 	StarList.prototype.follow = function(followInfo, replaceNode){
 		_.ajax({
 			url: _.createUrl('/api/users?follow', 'POST'),
-			method: 'POST',
+			method: _.fixMethod('POST'),
 			data: {id: followInfo.id},
 			header: {'content-type': 'application/json'},
 			success: function(data){
@@ -143,7 +143,7 @@
 	StarList.prototype.unFollow = function(followInfo, replaceNode){
 		_.ajax({
 			url: _.createUrl('/api/users?unfollow', 'POST'),
-			method: 'POST',
+			method: _.fixMethod('POST'),
 			data: {id: followInfo.id},
 			header: {'content-type': 'application/json'},
 			success: function(data){

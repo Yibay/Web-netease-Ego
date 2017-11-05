@@ -59,7 +59,7 @@ if(!window.App || typeof window.App != 'object'){
 	Nav.prototype.initLoginStatus = function(){
 		_.ajax({
 			url: _.createUrl('/api/users?getloginuser', 'GET'),
-			method: 'GET',
+			method: _.fixMethod('GET'),
 			success: (function(data){
 				data = JSON.parse(data);
 				console.log(data);

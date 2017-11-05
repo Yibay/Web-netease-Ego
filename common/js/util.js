@@ -251,6 +251,14 @@
 		}
 		return full_url;
 	};
+	// 15. 处理method (github上模拟数据json，只能使用get方法)
+	_.fixMethod = function(method){
+		// 若接口为本地模式数据
+		if(api_url.indexOf('/Web-netease-Ego') !== -1){
+			method = 'GET';
+		}
+		return method;
+	};
 
 	// 把工具函数对象 绑定到 全局变量上。
 	global._ = _;
