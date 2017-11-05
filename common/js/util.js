@@ -240,7 +240,7 @@
 	// 14. 处理url
 	_.createUrl = function(url, method){
 		var full_url = '';
-		method ? method : 'GET';
+		method = method ? method : 'GET';
 		// 若接口为线上地址
 		if(api_url.indexOf('/Web-netease-Ego') === -1){
 			full_url = api_url + url;
