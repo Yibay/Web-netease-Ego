@@ -246,7 +246,7 @@
 		}
 		// 若接口为本地模拟数据
 		else{
-			full_url = api_url + '/' + method.toLowerCase() + url.replace(/\?/g,'/-/') + '/data.json';
+			full_url = api_url + '/' + method.toLowerCase() + url.replace(/\?/g,'/params/') + '/data.json';
 		}
 		return full_url;
 	};
