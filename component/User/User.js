@@ -71,7 +71,7 @@ if(!window.App || typeof window.App != 'object'){
 					// 触发未登录事件
 					this.emit('notLogin');
 				}
-			},
+			}.bind(this),
 			fail: function(){}
 		})
 	};	
