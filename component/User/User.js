@@ -67,9 +67,14 @@ if(!window.App || typeof window.App != 'object'){
 				data = JSON.parse(data);
 				console.log(data);
 				if(data.code === 200){
-					// window.location.href = base_url + "/index";
-					// 触发未登录事件
-					this.emit('notLogin');
+					if(location.pathnanme === "/Web-netease-Ego/" || location.pathnanme === "/Web-netease-Ego/index"){
+						// 触发未登录事件
+						this.emit('notLogin');
+					}
+					else{
+						// 跳转回首页
+						window.location.href = base_url + "/index";
+					}
 				}
 			}.bind(this),
 			fail: function(){}

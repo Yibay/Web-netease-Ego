@@ -95,8 +95,8 @@
 		typeof options.limit === 'undefined' || (this.param_limit = options.limit);
 
 		_.ajax({
-			url: '/api/works',
-			method: 'GET',
+			url: _.createUrl('/api/works', 'GET'),
+			method: _.fixMethod('GET'),
 			data: {
 				total: this.param_total,  // 是否需要返回总数
 				offset: this.param_offset, // 偏移数
@@ -163,8 +163,8 @@
 			content: `确定要删除作品<span>"${data.name}"</span>吗?`,
 			confirmCallBack: function(){
 				_.ajax({
-					url: `/api/works/${data.id}`,
-					method: 'DELETE',
+					url: _.createUrl(`/api/works/${data.id}`,'DELETE'),
+					method: _.fixMethod('DELETE'),
 					success: function(res){
 						// 刷新列表
 						this.getWorksList();
@@ -191,8 +191,8 @@
 				// 若新名称 不为空
 				if(new_name){
 					_.ajax({
-						url: `/api/works/${data.id}`,
-						method: 'PATCH',
+						url: _.createUrl(`/api/works/${data.id}`,'PATCH'),
+						method: _.fixMethod('PATCH'),
 						data: {name: new_name},
 						success: function(res){
 							res = JSON.parse(res);

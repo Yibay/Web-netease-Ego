@@ -127,7 +127,7 @@
 
 	// 重置验证码
 	RegisterModal.prototype.resetCaptcha = function(){
-		this.captchaImg.src = `/captcha?t=${new Date().getTime()}`
+		this.captchaImg.src = _.createUrl('/captcha');
 	};
 	// 表单验证
 	RegisterModal.prototype.check = function(){
