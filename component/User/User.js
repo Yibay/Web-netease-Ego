@@ -67,7 +67,9 @@ if(!window.App || typeof window.App != 'object'){
 				data = JSON.parse(data);
 				console.log(data);
 				if(data.code === 200){
-					window.location.href = base_url + "/index";
+					// window.location.href = base_url + "/index";
+					// 触发未登录事件
+					this.emit('notLogin');
 				}
 			},
 			fail: function(){}
