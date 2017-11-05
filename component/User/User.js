@@ -67,7 +67,7 @@ if(!window.App || typeof window.App != 'object'){
 				data = JSON.parse(data);
 				console.log(data);
 				if(data.code === 200){
-					if(location.pathnanme === "/Web-netease-Ego/" || location.pathnanme === "/Web-netease-Ego/index"){
+					if(location.pathname === "/Web-netease-Ego/" || location.pathname === "/Web-netease-Ego/index"){
 						// 触发未登录事件
 						this.emit('notLogin');
 					}
