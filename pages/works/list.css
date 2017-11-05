@@ -7,7 +7,7 @@
 @import url(../../component/User/User.css);
 @import url(../../component/Nav/Nav.css);
 @import url(../../component/Profile/Profile.css);
-@import url(../../component/WorksList/WorksList.css);
+@import url(../../component/WorksList/WorksList.css?t=20171105);
 @import url(../../component/Pagination/Pagination.css);
 @import url(../../component/Aside/Aside.css);
 @import url(../../component/Modal/Modal.css);

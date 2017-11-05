@@ -18,7 +18,7 @@
 			{{#if total}}
 				{{#each data}}
 				<li class="item" data-id="{{id}}" data-name="{{name}}">
-					<a href="/works/detail/{{id}}">
+					<a href="${base_url}/html/works/detail.html">
 						<img src="{{coverUrl}}" alt="" />
 						<h3>{{name}}</h3>
 					</a>
@@ -163,7 +163,8 @@
 			content: `确定要删除作品<span>"${data.name}"</span>吗?`,
 			confirmCallBack: function(){
 				_.ajax({
-					url: _.createUrl(`/api/works/${data.id}`,'DELETE'),
+					// url: _.createUrl(`/api/works/${data.id}`,'DELETE'),
+					url: _.createUrl(`/api/works?id`,'DELETE'),
 					method: _.fixMethod('DELETE'),
 					success: function(res){
 						// 刷新列表
@@ -191,7 +192,8 @@
 				// 若新名称 不为空
 				if(new_name){
 					_.ajax({
-						url: _.createUrl(`/api/works/${data.id}`,'PATCH'),
+						// url: _.createUrl(`/api/works/${data.id}`,'PATCH'),
+						url: _.createUrl(`/api/works?id`,'PATCH'),
 						method: _.fixMethod('PATCH'),
 						data: {name: new_name},
 						success: function(res){
