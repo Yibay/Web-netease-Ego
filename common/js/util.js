@@ -262,7 +262,7 @@
 	// 16. 格式化 日期 如 yyyy-mm-dd 形式
 	// 试试replace ＋ 正则的方法
 	_.parseDate = function(date){
-		(data && date instanceof Date) || (date = new Date()); // 非Date类型，取当前值
+		(date && date instanceof Date) || (date = new Date()); // 非Date类型，取当前值
 		var rule = 'yyyymmddhhnnss';
 		return rule.replace(/yyyy/,date.getFullYear()).replace(/mm/,_.format2dights(date.getMonth() + 1)).replace(/dd/,_.format2dights(date.getDate()))
 					.replace(/hh/,date.getHours()).replace(/nn/,date.getMinutes()).replace(/ss/,date.getSeconds());
