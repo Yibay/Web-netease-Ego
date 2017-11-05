@@ -241,7 +241,7 @@
 	_.createUrl = function(url, method){
 		var full_url = '';
 		// 若接口为线上地址
-		if(api_url.indexOf('/Web-netease-Ego') !== -1){
+		if(api_url.indexOf('/Web-netease-Ego') === -1){
 			full_url = api_url + url;
 		}
 		// 若接口为本地模拟数据
