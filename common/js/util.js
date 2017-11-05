@@ -237,6 +237,19 @@
 		});
 		return user_zodiac;
 	};
+	// 14. 处理url
+	_.createUrl = function(url, method){
+		var full_url = '';
+		// 若接口为线上地址
+		if(api_url.indexOf('/Web-netease-Ego') !== -1){
+			full_url = api_url + url;
+		}
+		// 若接口为本地模拟数据
+		else{
+			full_url = api_url + '/' + method.toLowerCase() + url.replace(/\?/g,'/-/') + '/data.json';
+		}
+		return full_url;
+	};
 
 	// 把工具函数对象 绑定到 全局变量上。
 	global._ = _;

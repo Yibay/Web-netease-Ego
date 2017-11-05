@@ -58,7 +58,7 @@ if(!window.App || typeof window.App != 'object'){
 	//  初始化登录状态
 	Nav.prototype.initLoginStatus = function(){
 		_.ajax({
-			url: api_url + '/api/users?getloginuser',
+			url: _.createUrl('/api/users?getloginuser', 'GET'),
 			method: 'GET',
 			success: (function(data){
 				data = JSON.parse(data);
