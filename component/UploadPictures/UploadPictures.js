@@ -176,7 +176,7 @@
 				}
 
 				xhr.upload.addEventListener('progress', this.progressHandler.bind(this, index), false);
-				xhr.open('POST', '/api/works?upload');
+				xhr.open(_.fixMethod('POST'), _.createUrl('/api/works?upload', 'POST'));
 				// 直接send FormData实例
 				xhr.send(fd);
 

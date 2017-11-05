@@ -7,7 +7,7 @@
 		init: function(){
 			// 未登录，则跳转回首页
 			App.emitter.on('notLogin', function(){
-				location.href = '/index';
+				location.href = `${base_url}/index`;
 			});
 			// 顶栏
 			this.initNav();
@@ -50,8 +50,8 @@
 		// 初始化标签
 		initTag: function(){
 			_.ajax({
-				url: '/api/tags?recommend',
-				method: 'GET',
+				url: _.createUrl('/api/tags?recommend', 'GET'),
+				method: _.fixMethod('GET'),
 				success: function(data){
 					data = JSON.parse(data);
 					if(data.code == 200){
@@ -129,8 +129,8 @@
 			if(!this.checkForm(data)){return;}
 			// 提交表单请求
 			_.ajax({
-				url: '/api/works',
-				method: 'POST',
+				url: _.createUrl('/api/works', 'POST'),
+				method: _.fixMethod('POST'),
 				data: data,
 				success: function(res){
 					res = JSON.parse(res);
@@ -138,7 +138,7 @@
 					// 上传成功
 					if(res.code === 200){
 						// 跳转回列表页
-						location.assign('/works');
+						location.assign(`${base_url}/works`);
 					}
 				},
 				fail: function(e){

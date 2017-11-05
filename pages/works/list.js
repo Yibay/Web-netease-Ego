@@ -7,7 +7,7 @@
 		init: function(){
 			// 未登录，则跳转回首页
 			App.emitter.on('notLogin', function(){
-				location.href = '/index';
+				location.href = `${base_url}/index`;
 			});
 			// 顶栏
 			this.initNav();
