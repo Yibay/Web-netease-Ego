@@ -17,6 +17,13 @@
 	<li>作品列表页：<a href="http://localhost:8002/works" target="_blank">http://localhost:8002/works</a></li>
 	<li>作品创建页：<a href="http://localhost:8002/works/create" target="_blank">http://localhost:8002/works/create</a></li>
 </ul>
+<h3>线上Demo地址</h3>
+<p>因为线上Demo 是无后台的mock数据，所以只支持部分项目功能。完整版，还需在本地环境，通过nei服务器体验</p>
+<ul>
+	<li>项目首页：<a href="https://yibay.github.io/Web-netease-Ego/" target="_blank">https://yibay.github.io/Web-netease-Ego/</a></li>
+	<li>作品列表页：<a href="https://yibay.github.io/Web-netease-Ego/html/works/list.html" target="_blank">https://yibay.github.io/Web-netease-Ego/html/works/list.html</a></li>
+	<li>作品创建页：<a href="https://yibay.github.io/Web-netease-Ego/html/works/create.html" target="_blank">https://yibay.github.io/Web-netease-Ego/html/works/create.html</a></li>
+</ul>
 <h3>项目展示</h3>
 <table>
 	<tr style="text-align:center;">
