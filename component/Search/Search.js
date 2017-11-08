@@ -6,7 +6,7 @@ if(!window.App || typeof window.App != 'object'){
 (function(App){
 
 	// 模板
-	var template = `<form action="${page_url}/search.html" class="m-search" id="search" method="GET">
+	var template = `<form action="${page_url}/search" class="m-search" id="search" method="GET">
 		<div class="u-search f-cb">
 			<input type="text" id="keyword" name="keyword" placeholder="输入搜索内容" />
 			<button class="u-icon u-icon-search u-icon-btn" type="submit"></button>
