@@ -11,6 +11,13 @@
 	<li><code>npm install nei -g</code> 若未安装nei脚手架，先全局安装nei</li>
 	<li><code>nei server</code> 在项目根目录下，启动 本地项目服务器</li>
 </ul>
+<h3>WebStorm Run/Debug配置</h3>
+<ul>
+    <li>
+        如要使用 WebStorm Run/Debug 来运行项目，配置如下：<br/>
+        Add New Configuration > Node.js > JavaScirpt file 为 WebStorm_run_nei.js 
+    </li>
+</ul>
 <h3>页面地址</h3>
 <ul>
 	<li>项目首页：<a href="http://localhost:8002/index" target="_blank">http://localhost:8002/index</a></li>
