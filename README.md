@@ -12,10 +12,13 @@
 	<li><code>nei server</code> 在项目根目录下，启动 本地项目服务器</li>
 </ul>
 <h3>WebStorm Run/Debug配置</h3>
+<p>如要使用 WebStorm Run/Debug 来运行项目，配置如下：</p>
 <ul>
     <li>
-        如要使用 WebStorm Run/Debug 来运行项目，配置如下：<br/>
-        Add New Configuration > Node.js > JavaScirpt file 为 WebStorm_run_nei.js 
+        方案1：Add New Configuration > npm > Command 为 test
+    </li>
+    <li>
+        方案2：Add New Configuration > Node.js > JavaScirpt file 为 WebStorm_run_nei.js 
     </li>
 </ul>
 <h3>页面地址</h3>

@@ -1,0 +1,24 @@
+{
+  "name": "web-netease-ego",
+  "version": "1.0.0",
+  "description": "动漫社区网站Ego（网易Mini项目）",
+  "main": "",
+  "scripts": {
+    "test": "nei server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yibay/Web-netease-Ego.git"
+  },
+  "keywords": [
+    "Mini",
+    "Ego",
+    "netease"
+  ],
+  "author": "Yibay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yibay/Web-netease-Ego/issues"
+  },
+  "homepage": "https://github.com/Yibay/Web-netease-Ego#readme"
+}
